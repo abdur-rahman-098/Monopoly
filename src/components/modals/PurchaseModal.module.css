@@ -1,0 +1,126 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 13, 20, 0.7);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+}
+
+.sheet {
+  width: 420px;
+  max-height: 80vh;
+  background: var(--colour-surface);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.colourBand {
+  width: 100%;
+  height: 8px;
+  border-radius: 2px;
+  margin: -8px 0 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.propertyName {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--colour-text);
+  text-transform: uppercase;
+}
+
+.propertyType {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.priceLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+}
+
+.priceValue {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--colour-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.rentTable {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rentRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3px 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--colour-text-muted);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 4px 0;
+}
+
+.cashInfo {
+  padding: 8px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions > * {
+  flex: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}

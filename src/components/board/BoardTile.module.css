@@ -1,0 +1,262 @@
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--colour-elevated);
+  border: 1px solid rgba(201, 168, 76, 0.14);
+  overflow: hidden;
+  padding: 0;
+  transition:
+    background var(--dur-tile-hover) var(--ease-out),
+    transform var(--dur-tile-hover) var(--ease-out),
+    box-shadow var(--dur-tile-hover) var(--ease-out),
+    border-color var(--dur-tile-hover) var(--ease-out);
+  min-width: 0;
+  min-height: 0;
+  border-radius: 0;
+}
+
+.tile:hover {
+  background: var(--colour-surface);
+}
+
+/* Property tiles open the inspector — lift and glow on hover. */
+.interactive:hover {
+  transform: scale(1.02);
+  z-index: 10;
+  border-color: var(--colour-gold);
+  box-shadow:
+    0 0 0 1px rgba(201, 168, 76, 0.45),
+    0 0 18px rgba(201, 168, 76, 0.25);
+}
+
+.corner {
+  align-items: center;
+  justify-content: center;
+  background: var(--colour-elevated);
+}
+
+.strip {
+  position: absolute;
+  z-index: 1;
+}
+
+.strip-bottom {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.strip-top {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.strip-left {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+}
+
+.strip-right {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 14px;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 20px 6px 8px;
+  text-align: center;
+  z-index: 2;
+}
+
+.bottom .body,
+.top .body {
+  writing-mode: horizontal-tb;
+}
+
+.left .body,
+.right .body {
+  writing-mode: vertical-rl;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--colour-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--colour-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.specialSymbol {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--colour-gold);
+  text-transform: uppercase;
+}
+
+.specialLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cornerSymbol {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--colour-gold);
+  letter-spacing: 0.06em;
+}
+
+.cornerLabel {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.ownerBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 3;
+}
+
+.left .ownerBar {
+  bottom: auto;
+  right: auto;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+}
+
+.right .ownerBar {
+  bottom: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+}
+
+.top .ownerBar {
+  bottom: auto;
+  top: 0;
+}
+
+.buildings {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  z-index: 4;
+}
+
+.house {
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: var(--colour-gold);
+  border-radius: 1px;
+}
+
+.hotel {
+  display: block;
+  width: 12px;
+  height: 18px;
+  background: var(--colour-danger);
+  border-radius: 1px;
+}
+
+/* Mortgaged: the tile darkens under a hatched overlay. */
+.mortgageOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 10px,
+      rgba(232, 69, 69, 0.08) 10px 12px
+    ),
+    rgba(13, 13, 20, 0.62);
+  pointer-events: none;
+}
+
+.mortgagedLabel {
+  margin: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--colour-danger);
+}
+
+.goFlash {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--colour-success);
+  animation: floatUp var(--dur-go-flash) ease forwards;
+  z-index: 6;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}

@@ -1,0 +1,149 @@
+.panel {
+  position: relative;
+  background: var(--colour-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition:
+    border-color var(--transition-default),
+    background var(--transition-default);
+}
+
+.active {
+  border-color: var(--border-strong);
+  background: var(--colour-surface-alt);
+  animation: activePulse var(--dur-active-pulse) ease-in-out infinite;
+}
+
+/* Whose turn it is: a slow, subtle breathing of the gold border. */
+@keyframes activePulse {
+  0%,
+  100% {
+    border-color: rgba(201, 168, 76, 0.4);
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0);
+  }
+  50% {
+    border-color: rgba(232, 201, 106, 0.95);
+    box-shadow: 0 0 14px rgba(201, 168, 76, 0.22);
+  }
+}
+
+.bankruptStamp {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(13, 13, 20, 0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bankruptStamp span {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--colour-danger);
+  border: 3px solid var(--colour-danger);
+  border-radius: var(--radius-sm);
+  padding: 4px 14px;
+  background: rgba(232, 69, 69, 0.1);
+  text-shadow: 0 0 18px rgba(232, 69, 69, 0.45);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  transform: rotate(45deg);
+  border: 1px solid rgba(13, 13, 20, 0.6);
+}
+
+.cashRow {
+  position: relative;
+  width: fit-content;
+}
+
+.badgeRow {
+  margin-top: 2px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.yourTurn {
+  background: var(--colour-gold-subtle);
+  color: var(--colour-gold-bright);
+  border: 1px solid var(--border-strong);
+}
+
+.waiting {
+  background: transparent;
+  color: var(--colour-text-dim);
+  border: 1px solid var(--border-subtle);
+}
+
+.jail {
+  background: rgba(232, 69, 69, 0.12);
+  color: var(--colour-danger);
+  border: 1px solid var(--colour-danger);
+}
+
+.bankrupt {
+  background: rgba(90, 85, 104, 0.2);
+  color: var(--colour-text-dim);
+  border: 1px solid var(--colour-text-dim);
+}
+
+.bandBar {
+  display: flex;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.band {
+  width: 16px;
+  height: 6px;
+  border-radius: 2px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--colour-text);
+}
+
+.cash {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--colour-gold);
+}
+
+.propertyCount {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--colour-text-dim);
+}

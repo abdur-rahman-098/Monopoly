@@ -1,0 +1,28 @@
+.notification {
+  background: var(--colour-surface);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--colour-gold);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  pointer-events: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--colour-text);
+}
+
+.amount {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  min-width: 80px;
+  text-align: right;
+}
+

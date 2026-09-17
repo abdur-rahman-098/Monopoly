@@ -1,0 +1,43 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 400;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+/* Centre the payload on the animated point. */
+.inner {
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.cash {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--colour-gold-bright);
+  background: var(--colour-elevated);
+  border: 1px solid var(--colour-gold);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  box-shadow: 0 0 18px rgba(201, 168, 76, 0.4);
+}
+
+.chip {
+  width: 22px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid rgba(13, 13, 20, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}

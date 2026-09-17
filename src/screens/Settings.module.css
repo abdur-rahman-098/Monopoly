@@ -1,0 +1,124 @@
+.screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: var(--colour-bg);
+  padding: 64px;
+}
+
+.container {
+  max-width: 560px;
+  width: 100%;
+}
+
+.group {
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.group:last-of-type {
+  border-bottom: none;
+}
+
+.groupTitle {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--colour-gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.rowLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--colour-text);
+}
+
+.comingSoon {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--colour-text-dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.segmented {
+  display: flex;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.segment {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  color: var(--colour-text-muted);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border-default);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.segment:last-child {
+  border-right: none;
+}
+
+.segmentActive {
+  background: var(--colour-gold-subtle);
+  color: var(--colour-gold);
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--colour-elevated);
+  border: 1px solid var(--border-default);
+  position: relative;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.toggleOn {
+  background: rgba(76, 175, 122, 0.2);
+  border-color: var(--colour-success);
+}
+
+.toggleKnob {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--colour-text-muted);
+  top: 2px;
+  left: 2px;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(20px);
+  background: var(--colour-success);
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer > * {
+  width: auto;
+  min-width: 140px;
+}

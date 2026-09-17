@@ -1,0 +1,228 @@
+.panel {
+  background: var(--colour-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.playerHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.playerDot {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.playerName {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--colour-text);
+  flex: 1;
+  text-align: left;
+}
+
+.playerCash {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--colour-gold);
+}
+
+.phaseLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--colour-text-muted);
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--colour-text-dim);
+  margin-top: -6px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-default);
+}
+
+.actionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.phaseBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.optionHint {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--colour-text-dim);
+  text-align: left;
+}
+
+.hintWarning {
+  color: var(--colour-warning);
+}
+
+.hintSuccess {
+  color: var(--colour-success);
+}
+
+/* ---- Jail panel (states A–D) ---- */
+
+.jail {
+  --jail-accent: var(--colour-gold);
+  position: relative;
+  width: calc(100% + 48px);
+  margin: -10px -24px -24px;
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  border-top: 1px solid rgba(232, 69, 69, 0.4);
+}
+
+.jail-normal {
+  --jail-accent: var(--colour-gold);
+}
+
+.jail-warning {
+  --jail-accent: var(--colour-warning);
+  background: rgba(232, 168, 56, 0.04);
+}
+
+.jail-danger {
+  --jail-accent: var(--colour-danger);
+  background: rgba(232, 69, 69, 0.06);
+}
+
+.jail-released {
+  --jail-accent: var(--colour-success);
+}
+
+.jailStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--colour-danger);
+}
+
+.jail-released .jailStrip {
+  background: var(--colour-success);
+}
+
+.jailHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.jailTitle {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--colour-text);
+}
+
+.attemptLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--jail-accent);
+  white-space: nowrap;
+}
+
+.pips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.pip {
+  height: 6px;
+  border-radius: 2px;
+  background: rgba(90, 85, 104, 0.35);
+  transition: background var(--transition-default);
+}
+
+.pipFilled {
+  background: var(--jail-accent);
+}
+
+.jailWarning {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(232, 69, 69, 0.5);
+  background: rgba(232, 69, 69, 0.1);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--colour-danger);
+}
+
+.fineRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+}
+
+.fineLabel {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--colour-text-muted);
+}
+
+.fineAmount {
+  white-space: nowrap;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--colour-danger);
+  font-variant-numeric: tabular-nums;
+}
+
+.fineCash {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--colour-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.jail-warning .rollHint {
+  color: var(--colour-warning);
+}

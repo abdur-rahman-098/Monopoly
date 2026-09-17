@@ -1,0 +1,37 @@
+.delta {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 15px;
+  pointer-events: none;
+  animation: floatUp var(--dur-money-delta) ease forwards;
+  white-space: nowrap;
+}
+
+.positive {
+  color: var(--colour-success);
+}
+
+.negative {
+  color: var(--colour-danger);
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -16px);
+  }
+}

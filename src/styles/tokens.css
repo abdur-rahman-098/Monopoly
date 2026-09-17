@@ -1,0 +1,74 @@
+:root {
+  /* Background */
+  --colour-bg: #0d0d14;
+  --colour-surface: #1e1e30;
+  --colour-surface-alt: #2a2a40;
+  --colour-elevated: #13131f;
+
+  /* Text */
+  --colour-text: #f0ede4;
+  --colour-text-muted: #a09a8a;
+  --colour-text-dim: #5a5568;
+
+  /* Accent */
+  --colour-gold: #c9a84c;
+  --colour-gold-bright: #e8c96a;
+  --colour-gold-subtle: rgba(201, 168, 76, 0.12);
+
+  /* Semantic */
+  --colour-success: #4caf7a;
+  --colour-warning: #e8a838;
+  --colour-danger: #e84545;
+  --colour-danger-red: #e84560;
+
+  /* Borders */
+  --border-subtle: rgba(201, 168, 76, 0.12);
+  --border-default: rgba(201, 168, 76, 0.2);
+  --border-strong: rgba(201, 168, 76, 0.4);
+
+  /* Player colours */
+  --colour-p1: #e84560;
+  --colour-p2: #4a7fe8;
+  --colour-p3: #4ac48a;
+  --colour-p4: #e8a838;
+
+  /* Property group colours */
+  --colour-brown: #8b5e3c;
+  --colour-light-blue: #6bb8d4;
+  --colour-pink: #d45c8b;
+  --colour-orange: #e88a35;
+  --colour-red: #e84545;
+  --colour-yellow: #e8d035;
+  --colour-green: #30a855;
+  --colour-dark-blue: #1a4fbf;
+
+  /* Typography */
+  --font-display: 'Barlow', sans-serif;
+  --font-body: 'DM Sans', 'Barlow', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Animation — every duration is multiplied by --anim-scale, which the
+     AnimationProvider sets from Settings (slow 1.5 / normal 1 / fast 0.5 / off 0).
+     Keep in sync with src/animation/config.ts. */
+  --anim-scale: 1;
+  --dur-button-hover: calc(80ms * var(--anim-scale));
+  --dur-button-press: calc(120ms * var(--anim-scale));
+  --dur-tile-hover: calc(100ms * var(--anim-scale));
+  --dur-active-pulse: calc(2000ms * var(--anim-scale));
+  --dur-go-flash: calc(1200ms * var(--anim-scale));
+  --dur-money-delta: calc(600ms * var(--anim-scale));
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Transitions */
+  --transition-fast: calc(80ms * var(--anim-scale)) var(--ease-out);
+  --transition-default: calc(200ms * var(--anim-scale)) ease;
+
+  /* Scrollbars (thin, dark) */
+  --scrollbar-thumb: rgba(201, 168, 76, 0.22);
+  --scrollbar-thumb-hover: rgba(201, 168, 76, 0.4);
+}

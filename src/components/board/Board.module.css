@@ -1,0 +1,70 @@
+.board {
+  position: relative;
+  display: grid;
+  grid-template-columns: 208px repeat(9, 1fr) 208px;
+  grid-template-rows: 208px repeat(9, 1fr) 208px;
+  width: 1560px;
+  height: 1560px;
+  background: var(--colour-bg);
+  outline: 2px solid rgba(201, 168, 76, 0.22);
+  flex-shrink: 0;
+}
+
+.centre {
+  position: relative;
+  grid-row: 2 / 11;
+  grid-column: 2 / 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  user-select: none;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 159px,
+      rgba(201, 168, 76, 0.04) 159px,
+      rgba(201, 168, 76, 0.04) 160px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 159px,
+      rgba(201, 168, 76, 0.04) 159px,
+      rgba(201, 168, 76, 0.04) 160px
+    );
+}
+
+.centreLabel {
+  font-family: var(--font-display);
+  font-size: 96px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--colour-gold);
+  opacity: 0.12;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.centreContent {
+  min-height: 260px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tokenLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.tokenSlot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+}

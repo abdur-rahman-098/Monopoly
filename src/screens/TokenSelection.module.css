@@ -1,0 +1,126 @@
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--colour-bg);
+  padding: 64px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.playerIndicator {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--colour-text-muted);
+  margin-top: 8px;
+}
+
+.tokenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.tokenCard {
+  background: var(--colour-surface);
+  border: 1px solid rgba(201, 168, 76, 0.14);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.tokenCard:hover:not(:disabled) {
+  border-color: var(--border-strong);
+}
+
+.tokenCard.selected {
+  background: var(--colour-surface-alt);
+  border-color: var(--colour-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.18);
+}
+
+.tokenCard.taken {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.tokenIconWrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tokenName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--colour-text);
+}
+
+.takenLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--colour-text-dim);
+  text-transform: uppercase;
+}
+
+.availableLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  margin-top: 40px;
+}
+
+.footerInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colourSwatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.footerActions {
+  display: flex;
+  gap: 12px;
+}
+
+.footerActions > * {
+  width: auto;
+  min-width: 140px;
+}

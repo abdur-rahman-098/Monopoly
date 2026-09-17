@@ -1,0 +1,93 @@
+.recipientRow {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 20px;
+  flex-wrap: wrap;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: var(--colour-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.columnTitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.checkboxRow input[type="checkbox"] {
+  accent-color: var(--colour-gold);
+}
+
+.cashRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cashInput {
+  width: 100%;
+  background: var(--colour-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--colour-text);
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  transition: border-color var(--transition-fast);
+}
+
+.cashInput:focus {
+  outline: none;
+  border-color: var(--colour-gold);
+}
+
+.empty {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--colour-text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.actions > * {
+  flex: 1;
+}

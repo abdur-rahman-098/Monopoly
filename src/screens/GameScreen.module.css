@@ -1,0 +1,154 @@
+.root {
+  position: fixed;
+  inset: 0;
+  background: var(--colour-bg);
+  overflow: hidden;
+}
+
+/*
+ * The whole game renders on a fixed 2880×1620 design frame (board 1560×1560,
+ * side panels 420px) that is scaled to fit the window. Side columns and the
+ * top bar keep their original component sizing via `zoom`, so their contents
+ * grow in proportion with the doubled board.
+ */
+.frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  background: var(--colour-bg);
+  overflow: hidden;
+}
+
+.topBar {
+  zoom: 1.5;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.menuBtn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--colour-text-muted);
+  background: var(--colour-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 5px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition:
+    border-color var(--dur-button-hover) var(--ease-out),
+    color var(--dur-button-hover) var(--ease-out),
+    transform var(--dur-button-press) var(--ease-spring);
+}
+
+.menuBtn:hover {
+  border-color: var(--colour-gold);
+  color: var(--colour-gold);
+  transform: translateY(-1px);
+}
+
+.menuBtn:active {
+  transform: scale(0.97);
+}
+
+.topSpacer {
+  flex: 1;
+}
+
+.roundLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--colour-text-dim);
+  text-transform: uppercase;
+}
+
+.activePlayerTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.activePlayerDot {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.activePlayerName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--colour-text);
+  text-transform: uppercase;
+}
+
+.activePlayerCash {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colour-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 420px 1fr 420px;
+  min-height: 0;
+}
+
+/* Left panel: actions on top, ACTIVITY log fills the rest and scrolls. */
+.actionColumn {
+  zoom: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-right: 1px solid var(--border-subtle);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.actionSlot {
+  flex-shrink: 0;
+  max-height: 72%;
+  overflow-y: auto;
+}
+
+.boardColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.playerColumn {
+  zoom: 1.5;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-left: 1px solid var(--border-subtle);
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Spacing lives inside the wrapper so a collapsing panel takes its gap with it. */
+.panelWrap {
+  padding-bottom: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}

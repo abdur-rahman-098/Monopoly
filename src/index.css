@@ -1,0 +1,33 @@
+/* Global overrides live in styles/tokens.css, reset.css, typography.css. */
+
+/* Thin, subtle scrollbars that sit inside the dark theme. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Each top-level screen fills the viewport so screens can cross-fade in place. */
+.screen-layer {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  background: var(--colour-bg);
+}

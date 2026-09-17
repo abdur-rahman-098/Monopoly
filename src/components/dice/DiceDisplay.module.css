@@ -1,0 +1,99 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.diceRow {
+  display: flex;
+  gap: 24px;
+}
+
+.die {
+  width: 100px;
+  height: 100px;
+  background: var(--colour-elevated);
+  border: 2px solid var(--border-default);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, filter;
+}
+
+.glow {
+  border-color: var(--colour-gold);
+  box-shadow: 0 0 0 5px rgba(201, 168, 76, 0.18);
+}
+
+.pipGrid {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3px;
+  padding: 6px;
+}
+
+.pip {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--colour-gold);
+  justify-self: center;
+  align-self: center;
+  aspect-ratio: 1 / 1;
+}
+
+.pipEmpty {
+  width: 100%;
+  height: 100%;
+}
+
+.blank {
+  color: var(--colour-text-dim);
+  font-size: 40px;
+  font-family: var(--font-mono);
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+}
+
+.total {
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--colour-gold);
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--colour-text-muted);
+  text-align: center;
+}
+
+.labelDanger {
+  color: var(--colour-danger);
+}
+
+.rollAgain {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--colour-danger);
+  background: rgba(232, 69, 69, 0.12);
+  border: 2px solid var(--colour-danger);
+  border-radius: var(--radius-sm);
+  padding: 6px 18px;
+}

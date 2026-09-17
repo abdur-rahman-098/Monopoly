@@ -1,0 +1,112 @@
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colour-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.boardOutline {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  animation: fadeInBoard 1.5s ease forwards;
+}
+
+@keyframes fadeInBoard {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInContent 0.8s ease 0.3s both;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--colour-gold);
+  line-height: 1;
+  margin-bottom: 48px;
+}
+
+.roster {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.playerRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--colour-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.slotLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.playerName {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--colour-text);
+}
+
+.colourSwatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.buttonWrap {
+  width: 200px;
+}

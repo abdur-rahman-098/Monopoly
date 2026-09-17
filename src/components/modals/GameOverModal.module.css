@@ -1,0 +1,219 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  overflow: hidden;
+  background-color: rgba(13, 13, 20, 0.82);
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 79px,
+      rgba(201, 168, 76, 0.03) 79px,
+      rgba(201, 168, 76, 0.03) 80px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 79px,
+      rgba(201, 168, 76, 0.03) 79px,
+      rgba(201, 168, 76, 0.03) 80px
+    );
+}
+
+/* The winner's colour floods up from the bottom edge. */
+.flood {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 100%;
+  transform: scaleY(0);
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--winner) 55%, transparent) 0%,
+    color-mix(in srgb, var(--winner) 22%, transparent) 45%,
+    rgba(13, 13, 20, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.burst {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.particle,
+.particleRay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: var(--winner);
+}
+
+.particle {
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  box-shadow: 0 0 16px var(--winner);
+}
+
+.particleRay {
+  width: 6px;
+  height: 80px;
+  margin: -40px 0 0 -3px;
+  border-radius: 3px;
+  box-shadow: 0 0 20px var(--winner);
+}
+
+.ring {
+  position: absolute;
+  left: -520px;
+  top: -520px;
+  width: 1040px;
+  height: 1040px;
+  border-radius: 50%;
+  border: 4px solid var(--winner);
+  box-shadow:
+    0 0 40px var(--winner),
+    inset 0 0 40px var(--winner);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  color: var(--colour-gold);
+  opacity: 0;
+}
+
+.victoryLabel {
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: var(--colour-gold);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+  text-shadow: 0 0 40px rgba(201, 168, 76, 0.35);
+}
+
+.winnerName {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+}
+
+.statRow {
+  display: flex;
+  gap: 40px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--colour-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.statSmall {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--colour-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+}
+
+.eliminated {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 24px;
+  background: var(--colour-elevated);
+  border-radius: var(--radius-md);
+  min-width: 240px;
+  opacity: 0;
+}
+
+.eliminatedRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eliminatedDot {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.eliminatedName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--colour-text);
+  flex: 1;
+}
+
+.eliminatedNote {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--colour-text-muted);
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  width: 400px;
+  gap: 12px;
+  margin-top: 8px;
+  opacity: 0;
+}

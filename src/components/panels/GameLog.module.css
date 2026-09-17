@@ -1,0 +1,54 @@
+.wrapper {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--colour-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.title {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--colour-text-dim);
+}
+
+/* min-height: 0 is essential — without it the flex child refuses to shrink and overflow is clipped. */
+.list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.diamond {
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  transform: rotate(45deg);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--colour-text-muted);
+}

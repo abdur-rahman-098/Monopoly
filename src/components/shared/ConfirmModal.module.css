@@ -1,0 +1,13 @@
+.body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--colour-text-muted);
+  margin: 12px 0 24px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
