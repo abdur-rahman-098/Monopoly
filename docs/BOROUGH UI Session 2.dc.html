@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0D0D14; -webkit-font-smoothing: antialiased; }
+  a { color: #C9A84C; text-decoration: none; }
+  a:hover { color: #E8C96A; }
+</style>
+</helmet>
+<div style="--gold: {{ gold }}; --display: {{ displayFont }}; --fs: {{ frameScale }}; background:#0D0D14; color:#F0EDE4; font-family:var(--display,'Barlow',sans-serif); padding:64px 48px 120px; max-width:1400px; margin:0 auto">
+
+  <div style="margin-bottom:88px">
+    <div style="font-size:48px; font-weight:900; letter-spacing:0.08em; line-height:1; color:var(--gold,#C9A84C)">BOROUGH</div>
+    <div style="margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">UI Design · Session 2 · Complete Screen Specification</div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">01 · MAIN MENU</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden">
+        <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 79px, rgba(201,168,76,0.05) 79px 80px), repeating-linear-gradient(0deg, transparent 0 79px, rgba(201,168,76,0.05) 79px 80px)"></div>
+        <div style="position:absolute; left:0; right:0; bottom:0; height:320px; display:flex; align-items:flex-end; gap:14px; padding:0 60px; opacity:0.5">
+          <div style="width:78px; height:150px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18)"></div>
+          <div style="width:52px; height:236px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18)"></div>
+          <div style="width:96px; height:104px; background:#13131F; border-top:1px solid rgba(201,168,76,0.14)"></div>
+          <div style="width:64px; height:290px; background:#13131F; border-top:1px solid rgba(201,168,76,0.22)"></div>
+          <div style="width:44px; height:180px; background:#13131F; border-top:1px solid rgba(201,168,76,0.14)"></div>
+          <div style="width:110px; height:132px; background:#13131F; border-top:1px solid rgba(201,168,76,0.14)"></div>
+          <div style="width:58px; height:258px; background:#13131F; border-top:1px solid rgba(201,168,76,0.2)"></div>
+          <div style="width:86px; height:168px; background:#13131F; border-top:1px solid rgba(201,168,76,0.14)"></div>
+          <div style="width:48px; height:212px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18)"></div>
+          <div style="width:120px; height:96px; background:#13131F; border-top:1px solid rgba(201,168,76,0.12)"></div>
+          <div style="width:66px; height:276px; background:#13131F; border-top:1px solid rgba(201,168,76,0.22)"></div>
+          <div style="width:54px; height:148px; background:#13131F; border-top:1px solid rgba(201,168,76,0.14)"></div>
+          <div style="width:92px; height:200px; background:#13131F; border-top:1px solid rgba(201,168,76,0.16)"></div>
+          <div style="width:70px; height:126px; background:#13131F; border-top:1px solid rgba(201,168,76,0.12)"></div>
+        </div>
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,13,20,0.4) 0%, rgba(13,13,20,0.86) 62%, #0D0D14 100%)"></div>
+
+        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:72px">
+          <div style="text-align:center">
+            <div style="font-size:112px; font-weight:900; letter-spacing:0.1em; line-height:1; color:var(--gold,#C9A84C)">BOROUGH</div>
+            <div style="margin-top:24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.22em; color:#A09A8A">OWN THE CITY. OUTLAST EVERYONE.</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:16px; width:340px">
+            <div style="padding:18px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:16px; font-weight:600; letter-spacing:0.12em; cursor:pointer; transition:background 80ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:#2A2A40; border-color:#E8C96A">NEW GAME</div>
+            <div style="padding:18px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:16px; font-weight:600; letter-spacing:0.12em; cursor:pointer; transition:color 80ms" style-hover="color:#F0EDE4; border-color:rgba(201,168,76,0.3)">HOW TO PLAY</div>
+            <div style="padding:18px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:16px; font-weight:600; letter-spacing:0.12em; cursor:pointer; transition:color 80ms" style-hover="color:#F0EDE4; border-color:rgba(201,168,76,0.3)">SETTINGS</div>
+            <div style="padding:18px; text-align:center; border-radius:4px; border:1px solid transparent; color:#5A5568; font-size:16px; font-weight:600; letter-spacing:0.12em; cursor:pointer; transition:color 80ms" style-hover="color:#A09A8A">QUIT</div>
+          </div>
+        </div>
+        <div style="position:absolute; right:32px; bottom:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">v1.0</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">02 · PLAYER SETUP</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden; padding:64px; display:flex; flex-direction:column">
+        <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">New Game</div>
+        <div style="margin-top:12px; font-size:14px; line-height:1.65; color:#A09A8A">2 to 4 players. Add players to begin.</div>
+
+        <div style="margin-top:56px; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px">
+          <sc-for list="{{ setupPlayers }}" as="p" hint-placeholder-count="3">
+            <div style="border-radius:8px; background:#1E1E30; border:1px solid {{ p.border }}; padding:28px 24px; display:flex; flex-direction:column; align-items:center; gap:24px">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:{{ p.colour }}">{{ p.slot }}</div>
+              <div style="width:88px; height:88px; border-radius:8px; background:#13131F; border:1px solid {{ p.border }}; display:flex; align-items:center; justify-content:center">
+                <div style="width:34px; height:34px; border-radius:4px; background:{{ p.colour }}; transform:rotate(45deg)"></div>
+              </div>
+              <div style="width:100%">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568; margin-bottom:8px">NAME</div>
+                <div style="padding-bottom:10px; border-bottom:1px solid rgba(201,168,76,0.25); font-size:18px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4">{{ p.name }}</div>
+              </div>
+              <div style="display:flex; align-items:center; justify-content:space-between; width:100%">
+                <div style="display:flex; align-items:center; gap:8px">
+                  <div style="width:12px; height:12px; border-radius:2px; background:{{ p.colour }}"></div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">{{ p.colourName }}</div>
+                </div>
+                <div style="padding:5px 10px; border-radius:4px; border:1px solid rgba(76,175,122,0.45); background:rgba(76,175,122,0.08); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#4CAF7A">READY</div>
+              </div>
+            </div>
+          </sc-for>
+          <div style="border-radius:8px; background:#13131F; border:1px dashed rgba(160,154,138,0.35); padding:28px 24px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.5)">
+            <div style="width:40px; height:40px; border-radius:4px; border:1px solid rgba(160,154,138,0.35); display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:400; color:#A09A8A">+</div>
+            <div style="font-size:14px; font-weight:600; letter-spacing:0.06em; color:#A09A8A">Add Player</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">OPTIONAL</div>
+          </div>
+        </div>
+
+        <div style="margin-top:auto; padding-top:40px; border-top:1px solid rgba(201,168,76,0.12); display:flex; align-items:center; justify-content:space-between">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">3 PLAYERS READY · $1,500 EACH</div>
+          <div style="display:flex; gap:16px">
+            <div style="padding:16px 32px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">BACK</div>
+            <div style="padding:16px 40px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">START GAME</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">03 · TOKEN SELECTION</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden; padding:64px; display:flex; flex-direction:column">
+        <div style="display:flex; align-items:baseline; gap:16px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:0.14em; color:#E84560">PLAYER 1</div>
+          <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Choose your token</div>
+        </div>
+        <div style="margin-top:12px; font-size:14px; line-height:1.65; color:#A09A8A">One token per player. Taken tokens are unavailable.</div>
+
+        <div style="margin-top:56px; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px">
+          <sc-for list="{{ tokens }}" as="t" hint-placeholder-count="8">
+            <div style="border-radius:8px; background:{{ t.bg }}; border:1px solid {{ t.border }}; box-shadow:{{ t.glow }}; padding:28px 20px; display:flex; flex-direction:column; align-items:center; gap:20px; opacity:{{ t.opacity }}; cursor:pointer; position:relative">
+              <div style="height:64px; display:flex; align-items:center; justify-content:center">
+                <sc-if value="{{ t.isKey }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; align-items:center; gap:2px">
+                    <div style="width:26px; height:26px; border-radius:50%; border:3px solid {{ t.ink }}"></div>
+                    <div style="width:26px; height:3px; background:{{ t.ink }}"></div>
+                    <div style="width:3px; height:12px; background:{{ t.ink }}"></div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isWatch }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:2px">
+                    <div style="width:8px; height:6px; background:{{ t.ink }}"></div>
+                    <div style="width:38px; height:38px; border-radius:50%; border:3px solid {{ t.ink }}; display:flex; align-items:center; justify-content:center">
+                      <div style="width:3px; height:12px; background:{{ t.ink }}"></div>
+                    </div>
+                    <div style="width:8px; height:6px; background:{{ t.ink }}"></div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isTower }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:3px">
+                    <div style="width:14px; height:12px; border:2px solid {{ t.ink }}"></div>
+                    <div style="width:26px; height:14px; border:2px solid {{ t.ink }}"></div>
+                    <div style="width:40px; height:16px; border:2px solid {{ t.ink }}"></div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isYacht }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:4px">
+                    <div style="width:0; height:0; border-left:16px solid {{ t.ink }}; border-bottom:22px solid transparent"></div>
+                    <div style="width:48px; height:5px; background:{{ t.ink }}"></div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isCase }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:2px">
+                    <div style="width:16px; height:7px; border:2px solid {{ t.ink }}; border-bottom:none"></div>
+                    <div style="width:48px; height:32px; border:3px solid {{ t.ink }}; display:flex; align-items:center; justify-content:center">
+                      <div style="width:14px; height:3px; background:{{ t.ink }}"></div>
+                    </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isRing }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:2px">
+                    <div style="width:14px; height:14px; background:{{ t.ink }}; transform:rotate(45deg)"></div>
+                    <div style="width:34px; height:34px; border-radius:50%; border:3px solid {{ t.ink }}"></div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isCar }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center">
+                    <div style="width:34px; height:12px; border:2px solid {{ t.ink }}; border-bottom:none; border-radius:8px 8px 0 0"></div>
+                    <div style="width:56px; height:14px; border:2px solid {{ t.ink }}; border-radius:4px"></div>
+                    <div style="display:flex; gap:26px; margin-top:3px">
+                      <div style="width:10px; height:10px; border-radius:50%; border:2px solid {{ t.ink }}"></div>
+                      <div style="width:10px; height:10px; border-radius:50%; border:2px solid {{ t.ink }}"></div>
+                    </div>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ t.isCrown }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; flex-direction:column; align-items:center; gap:3px">
+                    <div style="display:flex; align-items:flex-end; gap:4px">
+                      <div style="width:8px; height:20px; background:{{ t.ink }}"></div>
+                      <div style="width:8px; height:32px; background:{{ t.ink }}"></div>
+                      <div style="width:8px; height:20px; background:{{ t.ink }}"></div>
+                    </div>
+                    <div style="width:44px; height:6px; background:{{ t.ink }}"></div>
+                  </div>
+                </sc-if>
+              </div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.1em; color:{{ t.labelColour }}">{{ t.name }}</div>
+              <sc-if value="{{ t.taken }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute; top:16px; right:16px; padding:4px 8px; border-radius:4px; border:1px solid rgba(90,85,104,0.9); background:#0D0D14; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.08em; color:#A09A8A">TAKEN</div>
+              </sc-if>
+              <sc-if value="{{ t.selected }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute; top:16px; right:16px; padding:4px 8px; border-radius:4px; border:1px solid #E84560; background:rgba(232,69,96,0.12); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.08em; color:#E84560">SELECTED</div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin-top:auto; padding-top:40px; border-top:1px solid rgba(201,168,76,0.12); display:flex; align-items:center; justify-content:space-between">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">THE WATCH · PLAYER 1 · CRIMSON</div>
+          <div style="padding:16px 40px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">CONFIRM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">04 · FULL GAME BOARD · MID-GAME</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden; padding:24px; display:flex; flex-direction:column; align-items:center; gap:16px">
+
+        <div style="width:100%; height:40px; display:flex; align-items:center; justify-content:space-between">
+          <div style="display:flex; align-items:center; gap:16px">
+            <div style="padding:8px 14px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">MENU</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">ROUND 12</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px">
+            <div style="width:12px; height:12px; border-radius:2px; background:#E84560; transform:rotate(45deg)"></div>
+            <div style="font-size:15px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4">SARAH</div>
+            <div style="padding:5px 10px; border-radius:4px; border:1px solid var(--gold,#C9A84C); background:rgba(201,168,76,0.08); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:var(--gold,#C9A84C)">YOUR TURN</div>
+          </div>
+        </div>
+
+        <div style="width:100%; flex:1; min-height:0; display:flex; align-items:flex-start; justify-content:center; gap:16px">
+
+        <div style="width:290px; height:780px; flex:none; display:flex; flex-direction:column; gap:12px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#5A5568">CURRENT TURN · SARAH</div>
+          <div style="flex:none; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.25); padding:18px; display:flex; flex-direction:column; gap:14px">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#5A5568">LANDED ON</div>
+            <div style="display:flex; flex-direction:column; gap:8px">
+              <div style="font-size:22px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">WATER WORKS</div>
+              <div style="display:flex; align-items:center; gap:8px">
+                <div style="width:14px; height:6px; background:#6BB8D4"></div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.08em; color:#A09A8A">UTILITY · UNOWNED</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:baseline; justify-content:space-between; padding-top:12px; border-top:1px solid rgba(201,168,76,0.12)">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; color:#5A5568">PRICE</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:var(--gold,#C9A84C)">$150</div>
+            </div>
+            <div style="border-radius:4px; background:var(--gold,#C9A84C); padding:14px; text-align:center; font-size:13px; font-weight:700; letter-spacing:0.08em; color:#0D0D14; cursor:pointer" style-hover="background:#E8C96A">BUY THIS TILE</div>
+            <div style="border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.5); padding:12px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(160,154,138,0.7)">PASS</div>
+          </div>
+          <div style="flex:1; min-height:0; border-radius:8px; background:#13131F; border:1px solid rgba(201,168,76,0.12); padding:18px; display:flex; flex-direction:column; gap:12px; overflow:hidden">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#5A5568">ACTIVITY</div>
+            <sc-for list="{{ boardLog }}" as="l" hint-placeholder-count="8">
+              <div style="display:flex; align-items:flex-start; gap:8px">
+                <div style="flex:none; margin-top:4px; width:6px; height:6px; background:{{ l.colour }}; transform:rotate(45deg)"></div>
+                <div style="flex:1; min-width:0; font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.5; color:{{ l.ink }}">{{ l.text }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="width:780px; height:780px; flex:none; display:grid; grid-template-columns:104px repeat(9, 1fr) 104px; grid-template-rows:104px repeat(9, 1fr) 104px; background:#0D0D14; border:1px solid rgba(201,168,76,0.22); position:relative">
+
+          <div style="grid-row:2 / 11; grid-column:2 / 11; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; background:repeating-linear-gradient(90deg, transparent 0 47px, rgba(201,168,76,0.04) 47px 48px), repeating-linear-gradient(0deg, transparent 0 47px, rgba(201,168,76,0.04) 47px 48px)">
+            <div style="font-size:58px; font-weight:900; letter-spacing:0.14em; color:var(--gold,#C9A84C)">BOROUGH</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#5A5568">OWN THE CITY. OUTLAST EVERYONE.</div>
+            <div style="margin-top:28px; display:flex; gap:14px">
+              <div style="width:60px; height:60px; border-radius:6px; background:#13131F; border:1px solid rgba(201,168,76,0.2); padding:10px; display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, 1fr); gap:3px">
+                <sc-for list="{{ boardDice.d1 }}" as="p" hint-placeholder-count="9">
+                  <div style="border-radius:50%; background:{{ p.bg }}"></div>
+                </sc-for>
+              </div>
+              <div style="width:60px; height:60px; border-radius:6px; background:#13131F; border:1px solid rgba(201,168,76,0.2); padding:10px; display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, 1fr); gap:3px">
+                <sc-for list="{{ boardDice.d2 }}" as="p" hint-placeholder-count="9">
+                  <div style="border-radius:50%; background:{{ p.bg }}"></div>
+                </sc-for>
+              </div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; color:#A09A8A">ROLLED 7 · MOVE 7 SPACES</div>
+          </div>
+
+          <div style="grid-row:11; grid-column:11; border:1px solid rgba(201,168,76,0.2); background:#101019; padding:8px; display:flex; flex-direction:column; justify-content:space-between; position:relative">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; line-height:1; color:var(--gold,#C9A84C)">&#8592;</div>
+            <div>
+              <div style="font-size:20px; font-weight:900; letter-spacing:0.08em; color:#F0EDE4">GO</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gold,#C9A84C)">+$200</div>
+            </div>
+            <div style="position:absolute; top:8px; right:8px; width:11px; height:11px; border-radius:2px; background:#E8A838; transform:rotate(45deg)"></div>
+          </div>
+
+          <div style="grid-row:11; grid-column:1; border:1px solid rgba(201,168,76,0.2); background:#101019; display:flex; flex-direction:column">
+            <div style="flex:1; border-bottom:1px solid rgba(201,168,76,0.15); background:rgba(74,127,232,0.10); padding:6px; display:flex; align-items:flex-start">
+              <div style="font-size:9px; font-weight:600; letter-spacing:0.04em; line-height:1.2; color:#6BB8D4">JUST<br />VISITING</div>
+            </div>
+            <div style="flex:1; background:rgba(232,69,69,0.10); padding:8px; display:flex; align-items:flex-end; justify-content:space-between">
+              <div style="font-size:14px; font-weight:900; letter-spacing:0.06em; color:#E84545">JAIL</div>
+              <div style="display:flex; gap:2px">
+                <div style="width:1px; height:14px; background:rgba(232,69,69,0.8)"></div>
+                <div style="width:1px; height:14px; background:rgba(232,69,69,0.8)"></div>
+                <div style="width:1px; height:14px; background:rgba(232,69,69,0.8)"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="grid-row:1; grid-column:1; border:1px solid rgba(201,168,76,0.2); background:#101019; padding:8px; display:flex; flex-direction:column; justify-content:space-between">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; line-height:1.25; color:#A09A8A">FREE<br />PARKING</div>
+            <div style="align-self:center; width:28px; height:28px; border:1px solid rgba(160,154,138,0.4); border-radius:3px; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; color:#5A5568">P</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.06em; color:#5A5568">NO EFFECT</div>
+          </div>
+
+          <div style="grid-row:1; grid-column:11; border:1px solid rgba(232,69,69,0.35); background:#101019; padding:8px; display:flex; flex-direction:column; justify-content:space-between; align-items:flex-end">
+            <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; line-height:1.25; text-align:right; color:#F0EDE4">GO TO<br />JAIL</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:22px; line-height:1; color:#E84545">&#8600;</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.06em; color:#E84545">FORFEIT</div>
+          </div>
+
+          <sc-for list="{{ boardSpaces }}" as="s" hint-placeholder-count="36">
+            <div style="grid-row:{{ s.r }}; grid-column:{{ s.c }}; display:flex; flex-direction:{{ s.dir }}; background:{{ s.bg }}; border:1px solid {{ s.border }}; box-shadow:{{ s.glow }}; overflow:hidden; position:relative">
+              <sc-if value="{{ s.band }}" hint-placeholder-val="{{ false }}">
+                <div style="flex:none; width:{{ s.bw }}; height:{{ s.bh }}; background:{{ s.band }}"></div>
+              </sc-if>
+              <div style="flex:1; min-width:0; padding:6px 4px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; gap:3px">
+                <div style="display:flex; align-items:center; justify-content:center; gap:2px; min-height:12px">
+                  <sc-for list="{{ s.houses }}" as="h" hint-placeholder-count="0">
+                    <div style="width:5px; height:5px; border:1px solid #F0EDE4"></div>
+                  </sc-for>
+                  <sc-if value="{{ s.hotel }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:7px; height:10px; background:var(--gold,#C9A84C)"></div>
+                  </sc-if>
+                  <sc-if value="{{ s.isRisk }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:9px; height:9px; border:1px solid var(--gold,#C9A84C); transform:rotate(45deg)"></div>
+                  </sc-if>
+                  <sc-if value="{{ s.isCity }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:10px; height:10px; border-radius:50%; border:1px solid var(--gold,#C9A84C); display:flex; align-items:center; justify-content:center">
+                      <div style="width:3px; height:3px; border-radius:50%; background:var(--gold,#C9A84C)"></div>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ s.isStation }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:1px">
+                      <div style="width:11px; height:7px; border:1px solid #A09A8A; border-radius:2px 2px 0 0"></div>
+                      <div style="width:13px; height:1px; background:#A09A8A"></div>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ s.isBolt }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:4px; height:12px; background:var(--gold,#C9A84C); transform:skewX(-22deg)"></div>
+                  </sc-if>
+                  <sc-if value="{{ s.isDrop }}" hint-placeholder-val="{{ false }}">
+                    <div style="width:10px; height:10px; background:#6BB8D4; border-radius:50% 50% 50% 0; transform:rotate(-45deg)"></div>
+                  </sc-if>
+                </div>
+                <div style="font-size:8px; font-weight:600; letter-spacing:0.02em; line-height:1.25; text-align:center; color:#F0EDE4; text-wrap:pretty">{{ s.name }}</div>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:2px; width:100%">
+                  <sc-if value="{{ s.owner }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex; align-items:center; justify-content:center; gap:2px; width:100%; background:{{ s.glowFill }}">
+                      <div style="width:5px; height:5px; background:{{ s.ownerColour }}"></div>
+                      <div style="font-family:'IBM Plex Mono',monospace; font-size:7px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4">{{ s.owner }}</div>
+                    </div>
+                  </sc-if>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:8px; color:var(--gold,#C9A84C)">{{ s.price }}</div>
+                </div>
+              </div>
+              <sc-for list="{{ s.here }}" as="tk" hint-placeholder-count="0">
+                <div style="position:absolute; top:4px; right:4px; width:11px; height:11px; border-radius:2px; background:{{ tk.colour }}; transform:rotate(45deg)"></div>
+              </sc-for>
+            </div>
+          </sc-for>
+
+        </div>
+
+        <div style="width:290px; height:780px; flex:none; display:flex; flex-direction:column; gap:12px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#5A5568">STANDINGS · 4 ACTIVE</div>
+          <sc-for list="{{ boardHud }}" as="p" hint-placeholder-count="4">
+            <div style="flex:1; min-height:0; border-radius:8px; background:{{ p.bg }}; border:1px solid {{ p.border }}; padding:18px; display:flex; flex-direction:column; justify-content:space-between; gap:10px">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:8px">
+                <div style="display:flex; align-items:center; gap:8px">
+                  <div style="width:14px; height:14px; border-radius:3px; background:{{ p.colour }}; transform:rotate(45deg)"></div>
+                  <div style="font-size:14px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4">{{ p.name }}</div>
+                </div>
+                <div style="padding:3px 8px; border-radius:4px; border:1px solid {{ p.statusBorder }}; background:{{ p.statusBg }}; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.08em; color:{{ p.statusColour }}">{{ p.status }}</div>
+              </div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:{{ p.cashColour }}">{{ p.cash }}</div>
+              <div style="display:flex; align-items:center; gap:3px">
+                <sc-for list="{{ p.bands }}" as="b" hint-placeholder-count="4">
+                  <div style="flex:1; height:5px; background:{{ b }}"></div>
+                </sc-for>
+              </div>
+              <div style="display:flex; align-items:center; justify-content:space-between">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#A09A8A">{{ p.props }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#5A5568">{{ p.token }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">05 · REMAINING TILE GROUPS</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:40px; margin-bottom:56px">
+    <sc-for list="{{ tileGroups }}" as="g" hint-placeholder-count="7">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px">
+          <div style="width:16px; height:8px; background:{{ g.band }}"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">{{ g.name }} GROUP</div>
+        </div>
+        <div style="display:flex; gap:20px; flex-wrap:wrap">
+          <sc-for list="{{ g.tiles }}" as="t" hint-placeholder-count="3">
+            <div style="width:80px; height:120px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.18); overflow:hidden; display:flex; flex-direction:column">
+              <div style="flex:none; height:10px; background:{{ g.band }}"></div>
+              <div style="flex:1; min-height:0; padding:8px 6px; display:flex; flex-direction:column; justify-content:space-between; align-items:center">
+                <div style="font-size:9px; font-weight:600; letter-spacing:0.04em; line-height:1.25; text-align:center; overflow-wrap:anywhere; color:#F0EDE4">{{ t.name }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">{{ t.price }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; margin-bottom:16px">STATIONS · ONE DESIGN · FOUR NAMES · $200 EACH</div>
+      <div style="display:flex; gap:32px; flex-wrap:wrap; align-items:center">
+        <div style="width:80px; height:120px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.18); padding:10px 6px; display:flex; flex-direction:column; justify-content:space-between; align-items:center">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:2px">
+            <div style="width:22px; height:14px; border:1px solid #A09A8A; border-radius:3px 3px 0 0"></div>
+            <div style="width:26px; height:1px; background:#A09A8A"></div>
+          </div>
+          <div style="font-size:9px; font-weight:600; letter-spacing:0.06em; line-height:1.25; text-align:center; color:#F0EDE4">STATION</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; color:var(--gold,#C9A84C)">$200</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <sc-for list="{{ stationNames }}" as="n" hint-placeholder-count="4">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#A09A8A">{{ n.name }}</div>
+          </sc-for>
+          <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">RENT 1 · $25 &#183; 2 · $50 &#183; 3 · $100 &#183; 4 · $200</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; margin-bottom:16px">UTILITIES · $150 EACH</div>
+      <div style="display:flex; gap:20px; flex-wrap:wrap">
+        <div style="width:80px; height:120px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.18); padding:10px 6px; display:flex; flex-direction:column; justify-content:space-between; align-items:center">
+          <div style="width:7px; height:22px; background:var(--gold,#C9A84C); transform:skewX(-22deg)"></div>
+          <div style="font-size:9px; font-weight:600; letter-spacing:0.06em; line-height:1.25; text-align:center; color:#F0EDE4">ELECTRIC COMPANY</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; color:var(--gold,#C9A84C)">$150</div>
+        </div>
+        <div style="width:80px; height:120px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.18); padding:10px 6px; display:flex; flex-direction:column; justify-content:space-between; align-items:center">
+          <div style="width:20px; height:20px; background:#6BB8D4; border-radius:50% 50% 50% 0; transform:rotate(-45deg)"></div>
+          <div style="font-size:9px; font-weight:600; letter-spacing:0.06em; line-height:1.25; text-align:center; color:#F0EDE4">WATER WORKS</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; color:var(--gold,#C9A84C)">$150</div>
+        </div>
+        <div style="align-self:center; max-width:280px; font-size:14px; line-height:1.65; color:#A09A8A">One utility charges 4× the dice total. Both utilities charge 10×.</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; margin-bottom:16px">OWNED STATE EXAMPLES</div>
+      <div style="display:flex; gap:32px; flex-wrap:wrap">
+        <sc-for list="{{ ownedExamples }}" as="o" hint-placeholder-count="3">
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:center">
+            <div style="width:80px; height:120px; border-radius:4px; background:#1E1E30; border:1px solid {{ o.colour }}; overflow:hidden; display:flex; flex-direction:column">
+              <div style="flex:none; height:10px; background:{{ o.band }}"></div>
+              <div style="flex:1; min-height:0; padding:8px 6px; display:flex; flex-direction:column; justify-content:space-between; align-items:center">
+                <div style="font-size:9px; font-weight:600; letter-spacing:0.04em; line-height:1.25; text-align:center; overflow-wrap:anywhere; color:#F0EDE4">{{ o.name }}</div>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:100%">
+                  <div style="display:flex; align-items:center; justify-content:center; gap:4px; width:100%; padding:2px 0; border-radius:2px; background:{{ o.fill }}">
+                    <div style="width:6px; height:6px; border-radius:1px; background:{{ o.colour }}"></div>
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:8px; font-weight:600; letter-spacing:0.08em; color:#F0EDE4">{{ o.owner }}</div>
+                  </div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; color:var(--gold,#C9A84C)">{{ o.price }}</div>
+                </div>
+              </div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568; text-align:center">{{ o.group }} · {{ o.colourName }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">06 · THE CITY CARDS</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:flex; gap:48px; flex-wrap:wrap; padding:24px 0 16px; margin-bottom:88px">
+
+    <div style="width:240px; height:360px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.45); padding:20px; display:flex; flex-direction:column; transform:rotate(2deg)">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.16em; color:var(--gold,#C9A84C)">THE CITY</div>
+      <div style="position:relative; margin:20px -20px; height:150px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18); border-bottom:1px solid rgba(201,168,76,0.18); display:flex; align-items:center; justify-content:center; overflow:hidden">
+        <div style="position:absolute; width:132px; height:132px; border-radius:50%; border:1px solid rgba(201,168,76,0.18)"></div>
+        <div style="position:absolute; width:96px; height:96px; border-radius:50%; border:1px solid rgba(201,168,76,0.3)"></div>
+        <div style="position:absolute; width:60px; height:60px; border-radius:50%; border:1px solid rgba(201,168,76,0.5)"></div>
+        <div style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:34px; font-weight:600; font-variant-numeric:tabular-nums; color:#4CAF7A">+$100</div>
+      </div>
+      <div style="font-size:15px; line-height:1.7; color:#F0EDE4; text-wrap:pretty">Community fund pays out.<br />Collect $100.</div>
+      <div style="margin-top:auto; display:flex; justify-content:flex-end; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#4CAF7A">CREDIT</div>
+    </div>
+
+    <div style="width:240px; height:360px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.45); padding:20px; display:flex; flex-direction:column; transform:rotate(-1.5deg)">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.16em; color:var(--gold,#C9A84C)">THE CITY</div>
+      <div style="position:relative; margin:20px -20px; height:150px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18); border-bottom:1px solid rgba(201,168,76,0.18); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; overflow:hidden">
+        <div style="display:flex; gap:10px">
+          <div style="width:16px; height:16px; border-radius:50%; border:1px solid rgba(201,168,76,0.55)"></div>
+          <div style="width:16px; height:16px; border-radius:50%; border:1px solid rgba(201,168,76,0.55)"></div>
+          <div style="width:16px; height:16px; border-radius:50%; border:1px solid rgba(201,168,76,0.55)"></div>
+          <div style="width:16px; height:16px; border-radius:50%; background:var(--gold,#C9A84C)"></div>
+        </div>
+        <div style="width:180px; height:1px; background:rgba(201,168,76,0.25)"></div>
+        <div style="display:flex; align-items:baseline; gap:12px; font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums">
+          <div style="font-size:26px; font-weight:600; color:#F0EDE4">$40</div>
+          <div style="font-size:11px; letter-spacing:0.08em; color:#5A5568">HOUSE</div>
+          <div style="font-size:26px; font-weight:600; color:#F0EDE4">$115</div>
+          <div style="font-size:11px; letter-spacing:0.08em; color:#5A5568">HOTEL</div>
+        </div>
+      </div>
+      <div style="font-size:15px; line-height:1.7; color:#F0EDE4; text-wrap:pretty">Street repairs assessment.<br />Pay $40 per house. $115 per hotel.</div>
+      <div style="margin-top:auto; display:flex; justify-content:flex-end; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#E84545">DEBIT</div>
+    </div>
+
+    <div style="width:240px; height:360px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.45); padding:20px; display:flex; flex-direction:column; transform:rotate(1deg)">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.16em; color:var(--gold,#C9A84C)">THE CITY</div>
+      <div style="position:relative; margin:20px -20px; height:150px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18); border-bottom:1px solid rgba(201,168,76,0.18); display:flex; align-items:center; justify-content:center; overflow:hidden">
+        <div style="position:absolute; width:116px; height:116px; border-radius:50%; border:1px solid rgba(201,168,76,0.3)"></div>
+        <div style="position:absolute; width:116px; height:1px; background:rgba(201,168,76,0.25)"></div>
+        <div style="position:absolute; width:1px; height:116px; background:rgba(201,168,76,0.25)"></div>
+        <div style="position:relative; padding:8px 14px; background:#13131F; font-size:40px; font-weight:900; letter-spacing:0.1em; color:var(--gold,#C9A84C)">GO</div>
+      </div>
+      <div style="font-size:15px; line-height:1.7; color:#F0EDE4; text-wrap:pretty">Advance to GO.<br />Collect $200.</div>
+      <div style="margin-top:auto; display:flex; justify-content:flex-end; font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--gold,#C9A84C)">&#9658;</div>
+    </div>
+
+    <div style="width:240px; height:360px; border-radius:8px; background:#0D0D14; border:1px solid rgba(201,168,76,0.55); overflow:hidden; transform:rotate(-3deg); display:flex; align-items:center; justify-content:center; position:relative">
+      <div style="position:absolute; inset:0; background:repeating-radial-gradient(circle at 50% 50%, transparent 0 17px, rgba(201,168,76,0.17) 17px 18px)"></div>
+      <div style="position:absolute; inset:12px; border-radius:4px; border:1px solid rgba(201,168,76,0.3)"></div>
+      <div style="position:relative; padding:12px 18px; background:#0D0D14; font-size:22px; font-weight:900; letter-spacing:0.22em; color:var(--gold,#C9A84C); text-align:center; line-height:1.3">THE<br />CITY</div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">07 · DICE · ALL STATES</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin-bottom:88px">
+    <sc-for list="{{ diceStates }}" as="d" hint-placeholder-count="6">
+      <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); padding:28px 24px; display:flex; flex-direction:column; align-items:center; gap:24px; min-height:300px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#5A5568; align-self:flex-start">{{ d.label }}</div>
+        <div style="display:flex; gap:20px; filter:{{ d.filter }}">
+          <div style="width:72px; height:72px; border-radius:6px; background:#13131F; border:1px solid {{ d.border }}; box-shadow:{{ d.glow }}; padding:12px; display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, 1fr); gap:4px; transform:{{ d.t1 }}">
+            <sc-for list="{{ d.d1 }}" as="p" hint-placeholder-count="9">
+              <div style="border-radius:50%; background:{{ p.bg }}"></div>
+            </sc-for>
+          </div>
+          <div style="width:72px; height:72px; border-radius:6px; background:#13131F; border:1px solid {{ d.border }}; box-shadow:{{ d.glow }}; padding:12px; display:grid; grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(3, 1fr); gap:4px; transform:{{ d.t2 }}">
+            <sc-for list="{{ d.d2 }}" as="p" hint-placeholder-count="9">
+              <div style="border-radius:50%; background:{{ p.bg }}"></div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center">
+          <sc-if value="{{ d.total }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:40px; font-weight:600; line-height:1; color:var(--gold,#C9A84C)">{{ d.total }}</div>
+          </sc-if>
+          <sc-if value="{{ d.headline }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:20px; font-weight:700; letter-spacing:0.06em; color:var(--gold,#C9A84C)">{{ d.headline }}</div>
+          </sc-if>
+          <div style="font-size:14px; line-height:1.65; color:{{ d.noteColour }}">{{ d.note }}</div>
+          <sc-if value="{{ d.jail }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top:4px; padding:5px 10px; border-radius:4px; border:1px solid rgba(232,69,69,0.5); background:rgba(232,69,69,0.08); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.06em; color:#E84545">{{ d.jail }}</div>
+          </sc-if>
+        </div>
+        <sc-if value="{{ d.showBtn }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:auto; width:100%; padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.1em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">ROLL</div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">08 · PURCHASE PANEL</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:40px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden">
+
+        <div style="position:absolute; top:40px; left:50%; margin-left:-300px; width:600px; height:600px; display:grid; grid-template-columns:82px repeat(9, 1fr) 82px; grid-template-rows:82px repeat(9, 1fr) 82px; border:1px solid rgba(201,168,76,0.18); opacity:0.4">
+          <sc-for list="{{ boardSpaces }}" as="s" hint-placeholder-count="36">
+            <div style="grid-row:{{ s.r }}; grid-column:{{ s.c }}; display:flex; flex-direction:{{ s.dir }}; background:{{ s.bg }}; border:1px solid {{ s.border }}">
+              <sc-if value="{{ s.band }}" hint-placeholder-val="{{ false }}">
+                <div style="flex:none; width:{{ s.bw }}; height:{{ s.bh }}; background:{{ s.band }}"></div>
+              </sc-if>
+            </div>
+          </sc-for>
+          <div style="grid-row:2 / 11; grid-column:2 / 11; display:flex; align-items:center; justify-content:center; font-size:38px; font-weight:900; letter-spacing:0.14em; color:rgba(201,168,76,0.5)">BOROUGH</div>
+        </div>
+
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,13,20,0.1) 0%, rgba(13,13,20,0.75) 55%, rgba(13,13,20,0.95) 100%)"></div>
+
+        <div style="position:absolute; left:0; right:0; bottom:0; background:#1E1E30; border-top:1px solid rgba(201,168,76,0.25); border-radius:8px 8px 0 0; overflow:hidden">
+          <div style="height:8px; background:#1A4FBF"></div>
+          <div style="padding:32px 48px 40px; display:flex; gap:56px; align-items:flex-start">
+            <div style="flex:none; width:360px">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.1em; color:#6B9CE8">DARK BLUE</div>
+              <div style="margin-top:12px; font-size:44px; font-weight:700; letter-spacing:0.04em; line-height:1; color:#F0EDE4">MAYFAIR</div>
+              <div style="margin-top:28px; display:flex; align-items:baseline; gap:16px">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">PRICE</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:48px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:var(--gold,#C9A84C)">$400</div>
+              </div>
+              <div style="margin-top:20px; display:flex; gap:32px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#A09A8A">
+                <div>HOUSE COST · $200</div>
+                <div>MORTGAGE · $200</div>
+              </div>
+            </div>
+
+            <div style="flex:1; max-width:420px; display:flex; flex-direction:column; gap:2px">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#5A5568; margin-bottom:8px">RENT SCHEDULE</div>
+              <sc-for list="{{ mayfairRent }}" as="r" hint-placeholder-count="6">
+                <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; padding:5px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">{{ r.k }}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:500; font-variant-numeric:tabular-nums; color:#F0EDE4">{{ r.v }}</div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="flex:none; width:300px; display:flex; flex-direction:column; gap:16px">
+              <div style="padding:16px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.12); display:flex; align-items:baseline; justify-content:space-between">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">YOUR CASH</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; font-variant-numeric:tabular-nums; color:#F0EDE4">$1,500</div>
+              </div>
+              <div style="padding:18px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:16px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">BUY FOR $400</div>
+              <div style="padding:12px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">PASS</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:88px">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">VARIANT · STATION LANDING</div>
+    <div style="width:100%; max-width:900px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.18); overflow:hidden">
+      <div style="height:8px; background:#2A2A40"></div>
+      <div style="padding:32px 40px; display:flex; gap:48px; align-items:center; flex-wrap:wrap">
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:8px">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:3px">
+            <div style="width:44px; height:28px; border:2px solid #A09A8A; border-radius:6px 6px 0 0"></div>
+            <div style="width:52px; height:2px; background:#A09A8A"></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">STATION</div>
+        </div>
+        <div style="flex:1; min-width:220px">
+          <div style="font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">KING'S CROSS STATION</div>
+          <div style="margin-top:16px; display:flex; align-items:baseline; gap:12px">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">PRICE</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:36px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:var(--gold,#C9A84C)">$200</div>
+          </div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; gap:2px; min-width:200px">
+          <sc-for list="{{ stationRent }}" as="r" hint-placeholder-count="4">
+            <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; padding:4px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">{{ r.k }}</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">{{ r.v }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; gap:12px; width:220px">
+          <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40">BUY FOR $200</div>
+          <div style="padding:12px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">PASS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">09 · RENT DUE PANEL</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px; margin-bottom:88px">
+
+    <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(232,69,69,0.3); overflow:hidden">
+      <div style="height:8px; background:#E83030"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#E84545">RENT DUE</div>
+          <div style="margin-top:12px; font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Strand</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">RED GROUP</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:4px; background:#13131F; border:1px solid rgba(74,127,232,0.4)">
+          <div style="width:10px; height:10px; border-radius:2px; background:#4A7FE8"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#F0EDE4">OWNER · JAMES · PLAYER 2</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px">
+          <div style="width:12px; height:12px; border:1px solid #F0EDE4"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">1 HOUSE · NO GROUP BONUS</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">RENT</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:56px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#E84545">$90</div>
+        </div>
+        <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40">PAY $90</div>
+      </div>
+    </div>
+
+    <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(232,69,69,0.3); overflow:hidden">
+      <div style="height:8px; background:#30A855"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#E84545">RENT DUE</div>
+          <div style="margin-top:12px; font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Regent Street</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">GREEN GROUP</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:4px; background:#13131F; border:1px solid rgba(74,196,138,0.4)">
+          <div style="width:10px; height:10px; border-radius:2px; background:#4AC48A"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#F0EDE4">OWNER · PRIYA · PLAYER 3</div>
+        </div>
+        <div style="padding:12px 14px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.25); font-size:14px; line-height:1.65; color:#A09A8A">Complete group. No buildings.</div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:12px">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">BASE</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-variant-numeric:tabular-nums; color:#5A5568; text-decoration:line-through">$26</div>
+          </div>
+          <div style="margin-top:10px; display:flex; align-items:center; gap:16px; flex-wrap:wrap">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:56px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#E84545">$52</div>
+            <div style="padding:5px 10px; border-radius:4px; border:1px solid var(--gold,#C9A84C); background:rgba(201,168,76,0.08); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.08em; color:var(--gold,#C9A84C)">2× GROUP BONUS</div>
+          </div>
+        </div>
+        <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40">PAY $52</div>
+      </div>
+    </div>
+
+    <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(232,69,69,0.55); overflow:hidden">
+      <div style="height:8px; background:#1A4FBF"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#E84545">RENT DUE</div>
+          <div style="margin-top:12px; font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Mayfair</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">DARK BLUE GROUP</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:4px; background:#13131F; border:1px solid rgba(74,127,232,0.4)">
+          <div style="width:10px; height:10px; border-radius:2px; background:#4A7FE8"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#F0EDE4">OWNER · JAMES · PLAYER 2</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px">
+          <div style="width:12px; height:18px; background:var(--gold,#C9A84C)"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">HOTEL</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">RENT</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:64px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#E84545">$2,000</div>
+        </div>
+        <div style="padding:14px; border-radius:4px; background:rgba(232,168,56,0.08); border:1px solid rgba(232,168,56,0.45)">
+          <div style="display:flex; align-items:baseline; justify-content:space-between">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#E8A838">YOUR CASH</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; font-variant-numeric:tabular-nums; color:#E8A838">$180</div>
+          </div>
+          <div style="margin-top:8px; font-size:14px; color:#E8A838">Insufficient funds.</div>
+        </div>
+        <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40">MANAGE ASSETS</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">10 · BUILDING INTERFACE</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="border-radius:8px; background:#2A2A40; border:1px solid rgba(201,168,76,0.25); overflow:hidden; margin-bottom:32px">
+    <div style="height:8px; background:#E87E30"></div>
+    <div style="padding:32px 40px">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap">
+        <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Build · Orange Group</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">COMPLETE GROUP · NO EVEN-BUILD RESTRICTION</div>
+      </div>
+
+      <div style="margin-top:32px; display:flex; flex-direction:column; gap:12px">
+        <sc-for list="{{ buildProps }}" as="b" hint-placeholder-count="3">
+          <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; padding:20px 24px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.12)">
+            <div style="flex:1; min-width:200px">
+              <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">{{ b.name }}</div>
+              <div style="margin-top:10px; display:flex; align-items:center; gap:8px">
+                <sc-for list="{{ b.houses }}" as="h" hint-placeholder-count="0">
+                  <div style="width:14px; height:14px; border:1px solid #F0EDE4; border-radius:2px"></div>
+                </sc-for>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">{{ b.count }}</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap">
+              <sc-if value="{{ b.canSell }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:12px 18px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4; border-color:rgba(201,168,76,0.35)">− SELL HOUSE · $100</div>
+              </sc-if>
+              <div style="padding:12px 18px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.45); color:#F0EDE4; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; cursor:pointer" style-hover="border-color:#E8C96A; background:#2A2A40">+ BUILD HOUSE · $100</div>
+            </div>
+          </div>
+        </sc-for>
+
+        <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; padding:20px 24px; border-radius:4px; background:#1E1E30; border:1px solid var(--gold,#C9A84C)">
+          <div style="flex:1; min-width:200px">
+            <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">Food Street</div>
+            <div style="margin-top:10px; display:flex; align-items:center; gap:8px">
+              <div style="width:14px; height:14px; border:1px solid #F0EDE4; border-radius:2px"></div>
+              <div style="width:14px; height:14px; border:1px solid #F0EDE4; border-radius:2px"></div>
+              <div style="width:14px; height:14px; border:1px solid #F0EDE4; border-radius:2px"></div>
+              <div style="width:14px; height:14px; border:1px solid #F0EDE4; border-radius:2px"></div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--gold,#C9A84C)">4 HOUSES · HOTEL AVAILABLE</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center">
+            <div style="padding:12px 18px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">− SELL HOUSE · $100</div>
+            <div style="display:flex; align-items:center; gap:10px; padding:14px 22px; border-radius:4px; background:#2A2A40; border:1px solid var(--gold,#C9A84C); box-shadow:0 0 0 3px rgba(201,168,76,0.12); cursor:pointer" style-hover="border-color:#E8C96A">
+              <div style="width:11px; height:16px; background:var(--gold,#C9A84C)"></div>
+              <div style="font-size:14px; font-weight:600; letter-spacing:0.08em; color:#F0EDE4">UPGRADE TO HOTEL · $100</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:32px; padding-top:24px; border-top:1px solid rgba(201,168,76,0.15); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap">
+        <div style="display:flex; gap:32px; flex-wrap:wrap">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">AVAILABLE CASH</div>
+            <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:500; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">$620</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">SELECTED</div>
+            <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.04em; color:#F0EDE4">2 HOUSES · $200 · REMAINING $420</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px">
+          <div style="padding:16px 28px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CANCEL</div>
+          <div style="padding:16px 36px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">CONFIRM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin:88px 0 32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">11 · HOTEL UPGRADE</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="margin-bottom:88px; width:100%; max-width:520px; border-radius:8px; background:#2A2A40; border:1px solid var(--gold,#C9A84C); overflow:hidden">
+    <div style="height:8px; background:#E87E30"></div>
+    <div style="padding:32px; display:flex; flex-direction:column; gap:28px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:var(--gold,#C9A84C)">HOTEL UPGRADE</div>
+        <div style="margin-top:12px; font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">FOOD STREET</div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:center; gap:28px; padding:28px 20px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.12)">
+        <div style="display:flex; gap:8px">
+          <div style="width:20px; height:20px; border:1px solid #F0EDE4; border-radius:2px"></div>
+          <div style="width:20px; height:20px; border:1px solid #F0EDE4; border-radius:2px"></div>
+          <div style="width:20px; height:20px; border:1px solid #F0EDE4; border-radius:2px"></div>
+          <div style="width:20px; height:20px; border:1px solid #F0EDE4; border-radius:2px"></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; color:#5A5568">&#8594;</div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:2px">
+          <div style="width:18px; height:10px; background:var(--gold,#C9A84C)"></div>
+          <div style="width:26px; height:34px; background:var(--gold,#C9A84C)"></div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:2px">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">COST</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">$100</div>
+        </div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">CURRENT CASH</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">$820</div>
+        </div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">REMAINING AFTER UPGRADE</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">$720</div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:12px">
+        <div style="flex:1; padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">UPGRADE</div>
+        <div style="flex:none; padding:16px 28px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CANCEL</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">12 · MORTGAGE · UNMORTGAGE</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px; margin-bottom:88px">
+
+    <div style="border-radius:8px; background:#2A2A40; border:1px solid rgba(232,168,56,0.45); overflow:hidden">
+      <div style="height:8px; background:#6BB8D4"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#E8A838">MORTGAGE PROPERTY</div>
+          <div style="margin-top:12px; font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Euston Road</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">LIGHT BLUE GROUP</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">MORTGAGE VALUE</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:44px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#4CAF7A">+$50</div>
+        </div>
+        <div style="padding:14px; border-radius:4px; background:rgba(232,168,56,0.08); border:1px solid rgba(232,168,56,0.4); font-size:14px; line-height:1.65; color:#E8A838">Mortgaged properties earn no rent.</div>
+        <div style="display:flex; flex-direction:column; gap:2px">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">CURRENT CASH</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">$80</div>
+          </div>
+          <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">CASH AFTER MORTGAGE</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">$130</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px">
+          <div style="flex:1; padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid #E8A838; color:#E8A838; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:rgba(232,168,56,0.1)">MORTGAGE FOR $50</div>
+          <div style="flex:none; padding:16px 24px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CANCEL</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-radius:8px; background:#2A2A40; border:1px solid rgba(201,168,76,0.3); overflow:hidden">
+      <div style="height:8px; background:#6BB8D4"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:var(--gold,#C9A84C)">UNMORTGAGE PROPERTY</div>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px; flex-wrap:wrap">
+            <div style="font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Euston Road</div>
+            <div style="padding:4px 8px; border-radius:4px; border:1px solid rgba(90,85,104,0.9); background:#13131F; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A">MORTGAGED</div>
+          </div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">LIGHT BLUE GROUP</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">COST TO UNMORTGAGE</div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:44px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:var(--gold,#C9A84C)">$50</div>
+        </div>
+        <div style="padding:14px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.2); font-size:14px; line-height:1.65; color:#A09A8A">Property will earn rent again.</div>
+        <div style="display:flex; flex-direction:column; gap:2px">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">CURRENT CASH</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">$340</div>
+          </div>
+          <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">CASH AFTER</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:#F0EDE4">$290</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px">
+          <div style="flex:1; padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">UNMORTGAGE FOR $50</div>
+          <div style="flex:none; padding:16px 24px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CANCEL</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">13 · TRADE INTERFACE</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.22); padding:32px 40px; margin-bottom:32px">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap">
+      <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Trade · SARAH and JAMES</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">BOTH PARTIES MUST ACCEPT</div>
+    </div>
+
+    <div style="margin-top:32px; display:grid; grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr); gap:32px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; align-items:center; gap:10px; padding-bottom:14px; border-bottom:1px solid rgba(232,69,96,0.45)">
+          <div style="width:12px; height:12px; border-radius:2px; background:#E84560"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#E84560">YOU · SARAH</div>
+        </div>
+        <div style="border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); overflow:hidden; display:flex">
+          <div style="width:8px; background:#E87E30"></div>
+          <div style="flex:1; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px">
+            <div>
+              <div style="font-size:18px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">FOOD STREET</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">ORANGE · UNIMPROVED</div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">$200</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:16px 20px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15)">
+          <div style="padding:6px 12px; border-radius:4px; border:1px solid var(--gold,#C9A84C); font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">$100</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">CASH</div>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <div style="padding:12px 18px; border-radius:4px; border:1px dashed rgba(160,154,138,0.35); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.5); color:#F0EDE4">+ ADD PROPERTY</div>
+          <div style="padding:12px 18px; border-radius:4px; border:1px dashed rgba(160,154,138,0.35); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.5); color:#F0EDE4">+ ADD CASH</div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(180deg, transparent, rgba(201,168,76,0.3) 20%, rgba(201,168,76,0.3) 80%, transparent)"></div>
+
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; align-items:center; gap:10px; padding-bottom:14px; border-bottom:1px solid rgba(74,127,232,0.45)">
+          <div style="width:12px; height:12px; border-radius:2px; background:#4A7FE8"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#4A7FE8">JAMES · PLAYER 2</div>
+        </div>
+        <div style="border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); overflow:hidden; display:flex">
+          <div style="width:8px; background:#E83030"></div>
+          <div style="flex:1; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px">
+            <div>
+              <div style="font-size:18px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">STRAND</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">RED · UNIMPROVED</div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">$220</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <div style="padding:12px 18px; border-radius:4px; border:1px dashed rgba(160,154,138,0.35); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.5); color:#F0EDE4">+ ADD PROPERTY</div>
+          <div style="padding:12px 18px; border-radius:4px; border:1px dashed rgba(160,154,138,0.35); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.5); color:#F0EDE4">+ ADD CASH</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px; padding-top:24px; border-top:1px solid rgba(201,168,76,0.15); display:flex; align-items:center; justify-content:flex-end; gap:16px">
+      <div style="padding:16px 28px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CANCEL</div>
+      <div style="padding:16px 36px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">PROPOSE TRADE</div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px; margin-bottom:88px">
+    <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.12); padding:28px; opacity:0.6">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">RESPONSE STATE A</div>
+      <div style="margin-top:20px; display:flex; align-items:center; gap:12px">
+        <div style="width:8px; height:8px; border-radius:50%; background:#4A7FE8; box-shadow:0 0 0 5px rgba(74,127,232,0.18)"></div>
+        <div style="font-size:18px; font-weight:600; letter-spacing:0.04em; color:#A09A8A">Awaiting JAMES · Player 2</div>
+      </div>
+      <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap">
+        <div style="flex:1; min-width:120px; padding:14px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.1); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">FOOD STREET + $100</div>
+        <div style="flex:1; min-width:120px; padding:14px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.1); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">STRAND</div>
+      </div>
+    </div>
+
+    <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.12); padding:28px; display:flex; flex-direction:column; gap:20px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">RESPONSE STATE B</div>
+      <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">JAMES declined the trade.</div>
+      <div style="align-self:flex-start; padding:14px 28px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CLOSE</div>
+    </div>
+
+    <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.12); padding:28px; display:flex; flex-direction:column; gap:20px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">VARIANT · TWO FOR ONE</div>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap">
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-radius:4px; background:#13131F; border-left:4px solid #E87E30; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#F0EDE4">BOW STREET</div>
+          <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-radius:4px; background:#13131F; border-left:4px solid #E87E30; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#F0EDE4">MARLBOROUGH ST</div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; color:#5A5568">&#8646;</div>
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-radius:4px; background:#13131F; border-left:4px solid #E83030; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#F0EDE4">TRAFALGAR SQUARE</div>
+      </div>
+      <div style="font-size:14px; line-height:1.65; color:#A09A8A">Valid trade. No special treatment.</div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">14 · JAIL PANEL</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:32px; margin-bottom:88px">
+
+    <div style="border-radius:8px; background:#2A2A40; border:1px solid rgba(232,69,69,0.4); overflow:hidden">
+      <div style="height:8px; background:#E84545"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">In Jail</div>
+          <div style="margin-top:8px; display:flex; align-items:center; gap:10px">
+            <div style="width:10px; height:10px; border-radius:2px; background:#E84560"></div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.1em; color:#E84560">SARAH · PLAYER 1</div>
+          </div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">STATE A · ALL OPTIONS AVAILABLE</div>
+        <div style="display:flex; flex-direction:column; gap:12px">
+          <div>
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">ROLL FOR DOUBLE</div>
+            <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#5A5568">A double releases you. 6+6 does not.</div>
+          </div>
+          <div>
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.2); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.45)">PAY $50 TO LEAVE</div>
+            <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#5A5568">Your cash: $340 · After: $290</div>
+          </div>
+          <div>
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.2); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="border-color:rgba(201,168,76,0.45)">USE GET OUT OF JAIL FREE</div>
+            <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#4CAF7A">Held · 1 card</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-radius:8px; background:#2A2A40; border:1px solid rgba(232,69,69,0.4); overflow:hidden">
+      <div style="height:8px; background:#E84545"></div>
+      <div style="padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-size:28px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">In Jail</div>
+          <div style="margin-top:8px; display:flex; align-items:center; gap:10px">
+            <div style="width:10px; height:10px; border-radius:2px; background:#E84560"></div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.1em; color:#E84560">SARAH · PLAYER 1</div>
+          </div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">STATE B · $30 CASH · NO CARD</div>
+        <div style="display:flex; flex-direction:column; gap:12px">
+          <div>
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">ROLL FOR DOUBLE</div>
+            <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#5A5568">A double releases you. 6+6 does not.</div>
+          </div>
+          <div style="opacity:0.45">
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.6); color:#5A5568; font-size:14px; font-weight:600; letter-spacing:0.08em">PAY $50 TO LEAVE</div>
+            <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#E8A838">Insufficient funds · $30</div>
+          </div>
+          <div style="opacity:0.45">
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.6); color:#5A5568; font-size:14px; font-weight:600; letter-spacing:0.08em">USE GET OUT OF JAIL FREE</div>
+            <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#5A5568">Not in your possession</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">15 · CARD DRAW OVERLAY</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(420px, 1fr)); gap:32px; margin-bottom:88px">
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568; margin-bottom:12px">RISK DRAW · BOARD PAUSED</div>
+      <div style="position:relative; height:540px; border-radius:8px; border:1px solid rgba(201,168,76,0.18); overflow:hidden; background:#0D0D14">
+        <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px), repeating-linear-gradient(0deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px)"></div>
+        <div style="position:absolute; inset:40px; border:1px solid rgba(201,168,76,0.12)"></div>
+        <div style="position:absolute; inset:0; background:rgba(13,13,20,0.92)"></div>
+        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px">
+          <div style="width:240px; height:300px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.5); padding:20px; display:flex; flex-direction:column">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.16em; color:var(--gold,#C9A84C)">RISK</div>
+            <div style="position:relative; margin:16px -20px; height:110px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18); border-bottom:1px solid rgba(201,168,76,0.18); overflow:hidden; display:flex; align-items:flex-end">
+              <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 18px, rgba(232,69,69,0.5) 18px 21px)"></div>
+              <div style="position:absolute; left:0; right:0; bottom:0; height:52px; background:linear-gradient(180deg, rgba(19,19,31,0), #13131F 70%)"></div>
+              <div style="position:relative; padding:0 20px 12px; font-size:18px; font-weight:900; letter-spacing:0.08em; color:#E84545">HELD</div>
+            </div>
+            <div style="font-size:14px; line-height:1.7; color:#F0EDE4">Go directly to Jail. Do not pass GO. Do not collect $200.</div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+            <div style="display:flex; align-items:center; gap:10px">
+              <div style="width:10px; height:10px; border-radius:2px; background:#E84560"></div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.1em; color:#E84560">SARAH · PLAYER 1</div>
+            </div>
+            <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">Sent to Jail.</div>
+          </div>
+          <div style="padding:14px 40px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">CONTINUE</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568; margin-bottom:12px">THE CITY DRAW · BOARD PAUSED</div>
+      <div style="position:relative; height:540px; border-radius:8px; border:1px solid rgba(201,168,76,0.18); overflow:hidden; background:#0D0D14">
+        <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px), repeating-linear-gradient(0deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px)"></div>
+        <div style="position:absolute; inset:40px; border:1px solid rgba(201,168,76,0.12)"></div>
+        <div style="position:absolute; inset:0; background:rgba(13,13,20,0.92)"></div>
+        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px">
+          <div style="width:240px; height:300px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.5); padding:20px; display:flex; flex-direction:column">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.16em; color:var(--gold,#C9A84C)">THE CITY</div>
+            <div style="position:relative; margin:16px -20px; height:110px; background:#13131F; border-top:1px solid rgba(201,168,76,0.18); border-bottom:1px solid rgba(201,168,76,0.18); display:flex; align-items:center; justify-content:center; overflow:hidden">
+              <div style="position:absolute; width:96px; height:96px; border-radius:50%; border:1px solid rgba(201,168,76,0.22)"></div>
+              <div style="position:absolute; width:62px; height:62px; border-radius:50%; border:1px solid rgba(201,168,76,0.4)"></div>
+              <div style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:28px; font-weight:600; color:#4CAF7A">+$100</div>
+            </div>
+            <div style="font-size:14px; line-height:1.7; color:#F0EDE4">Community fund pays out. Collect $100.</div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+            <div style="display:flex; align-items:center; gap:10px">
+              <div style="width:10px; height:10px; border-radius:2px; background:#4A7FE8"></div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.1em; color:#4A7FE8">JAMES · PLAYER 2</div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:40px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#4CAF7A">+$100</div>
+          </div>
+          <div style="padding:14px 40px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">CONTINUE</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">16 · MONEY TRANSFER FEEDBACK</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:12px; max-width:520px; margin-bottom:88px">
+    <sc-for list="{{ notifications }}" as="n" hint-placeholder-count="5">
+      <div style="display:flex; align-items:center; gap:16px; padding:16px 20px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.1); border-left:3px solid {{ n.accent }}">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; font-variant-numeric:tabular-nums; color:{{ n.colour }}; min-width:80px">{{ n.amount }}</div>
+        <div style="font-size:14px; color:#F0EDE4">{{ n.label }}</div>
+      </div>
+    </sc-for>
+    <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">STACKED IN THE UPPER BOARD AREA · AUTO-DISMISS</div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">17 · BANKRUPTCY FLOW</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:32px; margin-bottom:88px">
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:32px">
+      <div style="border-radius:8px; background:#2A2A40; border:1px solid rgba(232,69,69,0.5); padding:28px; display:flex; flex-direction:column; gap:24px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">STEP 1</div>
+          <div style="margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; color:#E84545">PAYMENT REQUIRED</div>
+        </div>
+        <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; line-height:1.4; color:#F0EDE4">You owe $850 to SARAH · Player 1</div>
+        <div style="display:flex; flex-direction:column; gap:2px">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(201,168,76,0.08)">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">YOUR CASH</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-variant-numeric:tabular-nums; color:#F0EDE4">$120</div>
+          </div>
+          <div style="display:flex; align-items:baseline; justify-content:space-between; padding:8px 0">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#E84545">SHORTFALL</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:32px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#E84545">$730</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <div style="flex:1; min-width:140px; padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.06em; cursor:pointer" style-hover="background:#1E1E30">SELL BUILDINGS</div>
+          <div style="flex:1; min-width:140px; padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid #E8A838; color:#E8A838; font-size:14px; font-weight:600; letter-spacing:0.06em; cursor:pointer" style-hover="background:rgba(232,168,56,0.1)">MORTGAGE PROPERTIES</div>
+        </div>
+      </div>
+
+      <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.18); padding:28px; display:flex; flex-direction:column; gap:20px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">STEP 2</div>
+          <div style="margin-top:10px; font-size:24px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Asset Management</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <sc-for list="{{ liquidate }}" as="l" hint-placeholder-count="4">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 16px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.1)">
+              <div>
+                <div style="font-size:14px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">{{ l.name }}</div>
+                <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">{{ l.detail }}</div>
+              </div>
+              <div style="flex:none; padding:10px 14px; border-radius:4px; border:1px solid {{ l.border }}; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.06em; color:{{ l.colour }}">{{ l.action }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="padding-top:16px; border-top:1px solid rgba(201,168,76,0.12); display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#A09A8A">RAISED $290 · STILL OWED $440</div>
+          <div style="padding:12px 18px; border-radius:4px; border:1px solid rgba(232,69,69,0.6); background:rgba(232,69,69,0.08); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.08em; color:#E84545">CANNOT MEET PAYMENT</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative; border-radius:8px; border:1px solid rgba(232,69,69,0.35); overflow:hidden; background:#0D0D14; min-height:420px">
+      <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 63px, rgba(201,168,76,0.05) 63px 64px), repeating-linear-gradient(0deg, transparent 0 63px, rgba(201,168,76,0.05) 63px 64px)"></div>
+      <div style="position:absolute; inset:0; background:rgba(13,13,20,0.93)"></div>
+      <div style="position:relative; padding:64px 48px; display:flex; flex-direction:column; align-items:center; gap:24px; text-align:center">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">STEP 3</div>
+        <div style="font-size:64px; font-weight:900; letter-spacing:0.1em; line-height:1; color:#E84545">ELIMINATED</div>
+        <div style="display:flex; align-items:center; gap:10px">
+          <div style="width:12px; height:12px; border-radius:2px; background:#4AC48A"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; letter-spacing:0.14em; color:#4AC48A">PRIYA · PLAYER 3</div>
+        </div>
+        <div style="font-size:15px; line-height:1.7; color:#F0EDE4">$850 owed. Assets insufficient.</div>
+        <div style="font-size:14px; line-height:1.65; color:#A09A8A">Properties return to the Bank.</div>
+        <div style="margin-top:8px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center">
+          <div style="width:60px; height:84px; border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.6); overflow:hidden; filter:saturate(0.15)">
+            <div style="height:8px; background:#30A855"></div>
+            <div style="padding:8px 4px; font-size:7px; font-weight:600; letter-spacing:0.04em; line-height:1.2; text-align:center; color:#5A5568">REGENT STREET</div>
+          </div>
+          <div style="width:60px; height:84px; border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.6); overflow:hidden; filter:saturate(0.15)">
+            <div style="height:8px; background:#30A855"></div>
+            <div style="padding:8px 4px; font-size:7px; font-weight:600; letter-spacing:0.04em; line-height:1.2; text-align:center; color:#5A5568">OXFORD STREET</div>
+          </div>
+          <div style="width:60px; height:84px; border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.6); overflow:hidden; filter:saturate(0.15)">
+            <div style="height:8px; background:#30A855"></div>
+            <div style="padding:8px 4px; font-size:7px; font-weight:600; letter-spacing:0.04em; line-height:1.2; text-align:center; color:#5A5568">BOND STREET</div>
+          </div>
+          <div style="align-self:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">RETURNED TO BANK</div>
+        </div>
+        <div style="margin-top:16px; padding:14px 40px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#1E1E30; border-color:#E8C96A">CONTINUE</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">18 · PLAYER PORTFOLIO</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden; padding:56px 64px; display:flex; flex-direction:column">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px">
+          <div style="display:flex; align-items:baseline; gap:16px">
+            <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Your Properties</div>
+            <div style="display:flex; align-items:center; gap:8px">
+              <div style="width:10px; height:10px; border-radius:2px; background:#E84560"></div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.1em; color:#E84560">SARAH</div>
+            </div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">ACTION PHASE</div>
+        </div>
+
+        <div style="margin-top:40px; display:flex; flex-direction:column; gap:32px">
+          <sc-for list="{{ portfolio }}" as="g" hint-placeholder-count="3">
+            <div style="display:flex; gap:24px">
+              <div style="flex:none; width:4px; border-radius:2px; background:{{ g.band }}"></div>
+              <div style="flex:1">
+                <div style="display:flex; align-items:center; gap:12px">
+                  <div style="font-size:15px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4">{{ g.name }}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">{{ g.note }}</div>
+                </div>
+                <div style="margin-top:14px; display:flex; flex-direction:column; gap:8px">
+                  <sc-for list="{{ g.props }}" as="p" hint-placeholder-count="3">
+                    <div style="display:flex; align-items:center; gap:24px; padding:14px 20px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.1)">
+                      <div style="flex:1; min-width:0; font-size:16px; font-weight:600; letter-spacing:0.04em; color:#F0EDE4">{{ p.name }}</div>
+                      <div style="flex:none; width:120px; display:flex; align-items:center; gap:6px">
+                        <sc-for list="{{ p.houses }}" as="h" hint-placeholder-count="0">
+                          <div style="width:12px; height:12px; border:1px solid #F0EDE4; border-radius:2px"></div>
+                        </sc-for>
+                        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#5A5568">{{ p.state }}</div>
+                        <sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}">
+                          <div style="padding:4px 8px; border-radius:4px; border:1px solid rgba(90,85,104,0.9); background:#13131F; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.06em; color:#A09A8A">{{ p.tag }}</div>
+                        </sc-if>
+                      </div>
+                      <div style="flex:none; display:flex; gap:8px">
+                        <sc-for list="{{ p.actions }}" as="a" hint-placeholder-count="2">
+                          <div style="padding:9px 14px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.2); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="color:#F0EDE4; border-color:rgba(201,168,76,0.45)">{{ a.t }}</div>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin-top:auto; padding-top:32px; border-top:1px solid rgba(201,168,76,0.15); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap">
+          <div style="display:flex; gap:40px; flex-wrap:wrap">
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">CASH</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:500; font-variant-numeric:tabular-nums; color:var(--gold,#C9A84C)">$620</div>
+            </div>
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">PROPERTIES</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:500; font-variant-numeric:tabular-nums; color:#F0EDE4">7</div>
+            </div>
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">NET WORTH</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:500; font-variant-numeric:tabular-nums; color:#F0EDE4">~$2,840</div>
+            </div>
+          </div>
+          <div style="padding:16px 40px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">DONE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">19 · GAME MENU</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:flex; gap:32px; flex-wrap:wrap; margin-bottom:88px">
+    <div style="position:relative; width:520px; max-width:100%; height:520px; border-radius:8px; border:1px solid rgba(201,168,76,0.14); overflow:hidden; background:#0D0D14">
+      <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px), repeating-linear-gradient(0deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px)"></div>
+      <div style="position:absolute; inset:0; background:rgba(13,13,20,0.9)"></div>
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center">
+        <div style="width:360px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.45); padding:28px; display:flex; flex-direction:column; gap:20px">
+          <div style="text-align:center; font-size:18px; font-weight:900; letter-spacing:0.2em; color:var(--gold,#C9A84C)">BOROUGH</div>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <div style="padding:18px; text-align:center; border-radius:4px; background:#2A2A40; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:16px; font-weight:600; letter-spacing:0.1em; cursor:pointer" style-hover="border-color:#E8C96A">RESUME</div>
+            <div style="padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">HOW TO PLAY</div>
+            <div style="padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">SETTINGS</div>
+            <div style="padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(232,168,56,0.5); color:#E8A838; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:rgba(232,168,56,0.08)">RESTART GAME</div>
+            <div style="padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(232,69,69,0.5); color:#E84545; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:rgba(232,69,69,0.08)">QUIT TO MAIN MENU</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative; width:520px; max-width:100%; height:520px; border-radius:8px; border:1px solid rgba(201,168,76,0.14); overflow:hidden; background:#0D0D14">
+      <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px), repeating-linear-gradient(0deg, transparent 0 47px, rgba(201,168,76,0.06) 47px 48px)"></div>
+      <div style="position:absolute; inset:0; background:rgba(13,13,20,0.9)"></div>
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center">
+        <div style="width:360px; border-radius:8px; background:#1E1E30; border:1px solid rgba(232,69,69,0.45); padding:28px; display:flex; flex-direction:column; gap:24px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">RESTART CONFIRMATION</div>
+          <div style="font-size:20px; font-weight:600; letter-spacing:0.02em; line-height:1.5; color:#F0EDE4">Restart game? All progress will be lost.</div>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <div style="padding:16px; text-align:center; border-radius:4px; background:#13131F; border:1px solid #E84545; color:#E84545; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="background:rgba(232,69,69,0.12)">RESTART</div>
+            <div style="padding:14px; text-align:center; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:14px; font-weight:600; letter-spacing:0.08em; cursor:pointer" style-hover="color:#F0EDE4">CANCEL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">20 · VICTORY SCREEN</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden">
+
+        <div style="position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 63px, rgba(201,168,76,0.04) 63px 64px), repeating-linear-gradient(0deg, transparent 0 63px, rgba(201,168,76,0.04) 63px 64px)"></div>
+        <div style="position:absolute; top:-200px; left:50%; margin-left:-260px; width:520px; height:1100px; background:linear-gradient(180deg, rgba(201,168,76,0.16) 0%, rgba(201,168,76,0.05) 45%, transparent 100%); transform:perspective(600px) rotateX(6deg)"></div>
+        <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 55% at 50% 42%, rgba(201,168,76,0.07) 0%, transparent 70%)"></div>
+        <div style="position:absolute; top:180px; left:300px; width:5px; height:5px; background:rgba(201,168,76,0.7); transform:rotate(45deg)"></div>
+        <div style="position:absolute; top:300px; left:1080px; width:4px; height:4px; background:rgba(201,168,76,0.5); transform:rotate(45deg)"></div>
+        <div style="position:absolute; top:520px; left:220px; width:3px; height:3px; background:rgba(201,168,76,0.45); transform:rotate(45deg)"></div>
+        <div style="position:absolute; top:420px; left:1200px; width:6px; height:6px; background:rgba(201,168,76,0.35); transform:rotate(45deg)"></div>
+        <div style="position:absolute; top:640px; left:980px; width:4px; height:4px; background:rgba(201,168,76,0.4); transform:rotate(45deg)"></div>
+
+        <div style="position:absolute; inset:0; padding:48px 64px; display:flex; flex-direction:column; align-items:center">
+          <div style="font-size:18px; font-weight:900; letter-spacing:0.24em; color:var(--gold,#C9A84C)">BOROUGH</div>
+          <div style="margin-top:12px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.24em; color:#A09A8A">LAST STANDING</div>
+
+          <div style="margin-top:44px; width:104px; height:104px; border-radius:8px; background:#1E1E30; border:1px solid #E84560; box-shadow:0 0 0 6px rgba(232,69,96,0.1); display:flex; align-items:center; justify-content:center">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:3px">
+              <div style="width:11px; height:8px; background:#E84560"></div>
+              <div style="width:50px; height:50px; border-radius:50%; border:4px solid #E84560; display:flex; align-items:center; justify-content:center">
+                <div style="width:4px; height:16px; background:#E84560"></div>
+              </div>
+              <div style="width:11px; height:8px; background:#E84560"></div>
+            </div>
+          </div>
+
+          <div style="margin-top:28px; font-size:96px; font-weight:900; letter-spacing:0.06em; line-height:1; color:#F0EDE4">SARAH</div>
+          <div style="margin-top:16px; display:flex; align-items:center; gap:10px">
+            <div style="width:10px; height:10px; border-radius:2px; background:#E84560"></div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; color:#E84560">PLAYER 1 · CRIMSON</div>
+          </div>
+          <div style="margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:56px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:var(--gold,#C9A84C)">$4,820</div>
+          <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.1em; color:#A09A8A">14 PROPERTIES · 3 HOTELS · 7 HOUSES</div>
+
+          <div style="margin-top:48px; display:flex; flex-direction:column; gap:8px; width:520px">
+            <sc-for list="{{ eliminated }}" as="e" hint-placeholder-count="3">
+              <div style="display:flex; align-items:center; gap:14px; padding:12px 16px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.08); opacity:0.55">
+                <div style="width:8px; height:8px; border-radius:2px; background:{{ e.colour }}"></div>
+                <div style="flex:1; font-size:14px; font-weight:600; letter-spacing:0.06em; color:#A09A8A">{{ e.name }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">{{ e.slot }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#5A5568">{{ e.round }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="margin-top:auto; display:flex; gap:16px">
+            <div style="padding:18px 44px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); color:#F0EDE4; font-size:15px; font-weight:600; letter-spacing:0.1em; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">PLAY AGAIN</div>
+            <div style="padding:18px 44px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); color:#A09A8A; font-size:15px; font-weight:600; letter-spacing:0.1em; cursor:pointer" style-hover="color:#F0EDE4">MAIN MENU</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">21 · HOW TO PLAY</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="border-radius:8px; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); padding:56px; margin-bottom:88px">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px">
+      <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">How to Play BOROUGH</div>
+      <div style="flex:none; padding:12px 22px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="color:#F0EDE4">CLOSE</div>
+    </div>
+    <div style="margin-top:48px; max-width:760px; display:flex; flex-direction:column; gap:32px">
+      <sc-for list="{{ howTo }}" as="h" hint-placeholder-count="8">
+        <div style="padding-bottom:32px; border-bottom:1px solid rgba(160,154,138,0.14)">
+          <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C)">{{ h.title }}</div>
+          <div style="margin-top:14px; font-size:15px; line-height:1.75; color:#F0EDE4; text-wrap:pretty">{{ h.body }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">22 · SETTINGS</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="border-radius:8px; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); padding:56px; max-width:860px">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px">
+      <div style="font-size:32px; font-weight:700; letter-spacing:0.04em; color:#F0EDE4">Settings</div>
+      <div style="flex:none; padding:12px 22px; border-radius:4px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="color:#F0EDE4">BACK</div>
+    </div>
+
+    <div style="margin-top:48px; display:flex; flex-direction:column; gap:40px">
+
+      <div>
+        <div style="font-size:15px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4; padding-bottom:14px; border-bottom:1px solid rgba(201,168,76,0.15)">DISPLAY</div>
+        <div style="margin-top:20px; display:flex; flex-direction:column; gap:18px">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div style="font-size:14px; color:#F0EDE4">Window mode</div>
+            <div style="display:flex; border-radius:4px; overflow:hidden; border:1px solid rgba(201,168,76,0.2)">
+              <div style="padding:10px 18px; background:#2A2A40; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--gold,#C9A84C)">FULLSCREEN</div>
+              <div style="padding:10px 18px; background:#13131F; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568; cursor:pointer" style-hover="color:#A09A8A">WINDOWED</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div style="font-size:14px; color:#F0EDE4">Resolution</div>
+            <div style="display:flex; align-items:center; gap:12px; padding:10px 16px; border-radius:4px; background:#2A2A40; border:1px solid rgba(201,168,76,0.2); min-width:200px; justify-content:space-between; cursor:pointer">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#F0EDE4">1920 × 1080</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A09A8A">&#9662;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="opacity:0.5">
+        <div style="display:flex; align-items:baseline; gap:14px; padding-bottom:14px; border-bottom:1px solid rgba(201,168,76,0.15)">
+          <div style="font-size:15px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4">AUDIO</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568">COMING SOON</div>
+        </div>
+        <div style="margin-top:20px; display:flex; flex-direction:column; gap:18px">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div style="font-size:14px; color:#A09A8A">Master volume</div>
+            <div style="width:220px; height:3px; border-radius:2px; background:#2A2A40; position:relative">
+              <div style="position:absolute; left:0; top:0; bottom:0; width:60%; background:#5A5568; border-radius:2px"></div>
+              <div style="position:absolute; left:60%; top:-5px; width:13px; height:13px; margin-left:-6px; border-radius:50%; background:#5A5568"></div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div style="font-size:14px; color:#A09A8A">Sound effects</div>
+            <div style="width:46px; height:24px; border-radius:12px; background:#2A2A40; border:1px solid rgba(160,154,138,0.2); position:relative">
+              <div style="position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:#5A5568"></div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div style="font-size:14px; color:#A09A8A">Music</div>
+            <div style="width:46px; height:24px; border-radius:12px; background:#2A2A40; border:1px solid rgba(160,154,138,0.2); position:relative">
+              <div style="position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:#5A5568"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:15px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4; padding-bottom:14px; border-bottom:1px solid rgba(201,168,76,0.15)">GAMEPLAY</div>
+        <div style="margin-top:20px; display:flex; flex-direction:column; gap:18px">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div style="font-size:14px; color:#F0EDE4">Animation speed</div>
+            <div style="display:flex; border-radius:4px; overflow:hidden; border:1px solid rgba(201,168,76,0.2)">
+              <div style="padding:10px 18px; background:#13131F; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568; cursor:pointer" style-hover="color:#A09A8A">SLOW</div>
+              <div style="padding:10px 18px; background:#2A2A40; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--gold,#C9A84C)">NORMAL</div>
+              <div style="padding:10px 18px; background:#13131F; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#5A5568; cursor:pointer" style-hover="color:#A09A8A">FAST</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div>
+              <div style="font-size:14px; color:#F0EDE4">Show rent calculations</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#5A5568">Rent breakdown before confirming payment</div>
+            </div>
+            <div style="flex:none; width:46px; height:24px; border-radius:12px; background:rgba(201,168,76,0.18); border:1px solid var(--gold,#C9A84C); position:relative; cursor:pointer">
+              <div style="position:absolute; top:3px; right:3px; width:16px; height:16px; border-radius:50%; background:var(--gold,#C9A84C)"></div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px">
+            <div>
+              <div style="font-size:14px; color:#F0EDE4">Confirm before buying</div>
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.04em; color:#5A5568">Adds a confirmation step on purchase</div>
+            </div>
+            <div style="flex:none; width:46px; height:24px; border-radius:12px; background:#2A2A40; border:1px solid rgba(160,154,138,0.25); position:relative; cursor:pointer">
+              <div style="position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:#A09A8A"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:15px; font-weight:600; letter-spacing:0.06em; color:#F0EDE4; padding-bottom:14px; border-bottom:1px solid rgba(201,168,76,0.15)">RESET</div>
+        <div style="margin-top:20px; display:inline-flex; padding:14px 24px; border-radius:4px; background:#13131F; border:1px solid rgba(201,168,76,0.15); font-size:14px; font-weight:600; letter-spacing:0.08em; color:#A09A8A; cursor:pointer" style-hover="color:#F0EDE4; border-color:rgba(201,168,76,0.35)">RESTORE DEFAULTS</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="margin:120px 0 88px; padding-top:56px; border-top:1px solid rgba(201,168,76,0.25)">
+    <div style="font-size:32px; font-weight:900; letter-spacing:0.06em; color:var(--gold,#C9A84C)">SESSION 2 PATCH</div>
+    <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">Gap fill · three deliverables</div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">23 · LATE GAME HUD — STRESS STATE</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="margin-bottom:88px" data-screen-label="23">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#5A5568; margin-bottom:16px">LATE GAME · STRESS STATE</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:16px">
+
+      <div style="border-radius:8px; background:#1E1E30; border:1px solid var(--gold,#C9A84C); padding:20px; display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+          <div style="display:flex; align-items:center; gap:10px; min-width:0">
+            <div style="flex:none; width:20px; height:20px; border-radius:50%; background:#E84560"></div>
+            <div style="font-size:15px; font-weight:700; letter-spacing:0.06em; color:#F0EDE4; white-space:nowrap">SARAH</div>
+          </div>
+          <div style="flex:none; padding:5px 10px; border-radius:4px; background:rgba(201,168,76,0.12); border:1px solid var(--gold,#C9A84C); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; white-space:nowrap; color:var(--gold,#C9A84C)">YOUR TURN</div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:var(--gold,#C9A84C)">$4,820</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#F0EDE4">14 PROPERTIES</div>
+      </div>
+
+      <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.12); border-left:3px solid #E8A838; padding:20px; display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+          <div style="display:flex; align-items:center; gap:10px; min-width:0">
+            <div style="flex:none; width:20px; height:20px; border-radius:50%; background:#4A7FE8"></div>
+            <div style="font-size:15px; font-weight:700; letter-spacing:0.06em; color:#F0EDE4; white-space:nowrap">JAMES</div>
+          </div>
+          <div style="flex:none; padding:5px 10px; border-radius:4px; background:#13131F; border:1px solid rgba(90,85,104,0.5); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; white-space:nowrap; color:#5A5568">WAITING</div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#E8A838">$180</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">3 PROPERTIES</div>
+      </div>
+
+      <div style="position:relative; border-radius:8px; background:#13131F; border:1px solid rgba(90,85,104,0.25); padding:20px; display:flex; flex-direction:column; gap:16px; overflow:hidden">
+        <div style="position:absolute; inset:0; background:linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(90,85,104,0.35) calc(50% - 1px), rgba(90,85,104,0.35) calc(50% + 1px), transparent calc(50% + 1px))"></div>
+        <div style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:12px">
+          <div style="display:flex; align-items:center; gap:10px; min-width:0">
+            <div style="flex:none; width:20px; height:20px; border-radius:50%; background:#2D4A3B; border:1px solid rgba(90,85,104,0.5)"></div>
+            <div style="font-size:15px; font-weight:700; letter-spacing:0.06em; color:#5A5568; white-space:nowrap">PRIYA</div>
+          </div>
+          <div style="flex:none; padding:5px 10px; border-radius:4px; background:rgba(232,69,69,0.08); border:1px solid rgba(232,69,69,0.5); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; white-space:nowrap; color:#E84545">BANKRUPT</div>
+        </div>
+        <div style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; line-height:1; color:#5A5568">—</div>
+        <div style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; white-space:nowrap; color:#5A5568">ELIMINATED · ROUND 10</div>
+      </div>
+
+      <div style="border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.12); padding:20px; display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+          <div style="display:flex; align-items:center; gap:10px; min-width:0">
+            <div style="flex:none; width:20px; height:20px; border-radius:50%; background:#E8A838"></div>
+            <div style="font-size:15px; font-weight:700; letter-spacing:0.06em; color:#F0EDE4; white-space:nowrap">ALI</div>
+          </div>
+          <div style="flex:none; display:flex; align-items:center; gap:6px; padding:5px 10px; border-radius:4px; background:rgba(232,69,69,0.08); border:1px solid rgba(232,69,69,0.5)">
+            <div style="display:flex; gap:2px">
+              <div style="width:1.5px; height:9px; background:#E84545"></div>
+              <div style="width:1.5px; height:9px; background:#E84545"></div>
+              <div style="width:1.5px; height:9px; background:#E84545"></div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; white-space:nowrap; color:#E84545">IN JAIL</div>
+          </div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1; color:#E84545">$0</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">2 PROPERTIES</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">24 · GAME INTRODUCTION SCREEN</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="overflow-x:auto; max-width:100%; margin-bottom:88px" data-screen-label="24">
+    <div style="position:relative; width:calc(1440px * var(--fs, 0.85)); height:calc(900px * var(--fs, 0.85))">
+      <div style="position:absolute; top:0; left:0; width:1440px; height:900px; transform:scale(var(--fs, 0.85)); transform-origin:top left; background:#0D0D14; border:1px solid rgba(201,168,76,0.18); border-radius:8px; overflow:hidden">
+
+        <div style="position:absolute; top:50%; left:50%; width:820px; height:820px; margin:-410px 0 0 -410px; opacity:0.2; display:grid; grid-template-columns:repeat(11, 1fr); grid-template-rows:repeat(11, 1fr); border:2px solid rgba(201,168,76,0.5)">
+          <sc-for list="{{ introBoardCells }}" as="c" hint-placeholder-count="40">
+            <div style="grid-column:{{ c.col }}; grid-row:{{ c.row }}; background:#13131F; border:1px solid rgba(201,168,76,0.3)"></div>
+          </sc-for>
+        </div>
+        <div style="position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(13,13,20,0.72) 0%, rgba(13,13,20,0.94) 55%, #0D0D14 100%)"></div>
+
+        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:40px; padding:80px">
+          <div style="font-size:84px; font-weight:900; letter-spacing:0.12em; line-height:1; color:var(--gold,#C9A84C)">BOROUGH</div>
+          <div style="width:660px; height:1px; background:rgba(201,168,76,0.35)"></div>
+
+          <div style="width:660px; display:flex; flex-direction:column; gap:14px">
+            <sc-for list="{{ introRoster }}" as="r" hint-placeholder-count="4">
+              <div style="display:grid; grid-template-columns:150px 18px 1fr auto; align-items:center; gap:20px">
+                <div style="font-size:19px; font-weight:600; letter-spacing:0.08em; color:#F0EDE4">{{ r.name }}</div>
+                <div style="font-size:13px; color:rgba(201,168,76,0.45); text-align:center">◆</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; color:#A09A8A">{{ r.token }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:{{ r.colour }}">{{ r.meta }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="width:660px; height:1px; background:rgba(201,168,76,0.35)"></div>
+
+          <div style="text-align:center">
+            <div style="font-size:40px; font-weight:700; letter-spacing:0.1em; line-height:1.1; color:#F0EDE4">SARAH GOES FIRST</div>
+            <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#A09A8A">Highest roll.</div>
+          </div>
+
+          <div style="margin-top:8px; padding:18px 64px; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); font-size:15px; font-weight:600; letter-spacing:0.2em; color:#F0EDE4; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">BEGIN</div>
+        </div>
+
+        <div style="position:absolute; right:40px; bottom:32px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#5A5568">$1,500 · EACH PLAYER</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:24px; margin-bottom:32px">
+    <div style="font-size:20px; font-weight:600; letter-spacing:0.04em; color:var(--gold,#C9A84C); white-space:nowrap">25 · PROPERTY INSPECTION CARD — DEFINITIVE</div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.25)"></div>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:40px" data-screen-label="25">
+
+    <div style="width:320px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#5A5568; margin-bottom:14px">UNOWNED</div>
+      <div style="width:320px; height:520px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); overflow:hidden; display:flex; flex-direction:column">
+        <div style="height:8px; background:#E87E30"></div>
+        <div style="position:relative; height:96px; background:#13131F; overflow:hidden">
+          <div style="position:absolute; left:28px; bottom:0; width:52px; height:96px; background:rgba(232,126,48,0.55)"></div>
+          <div style="position:absolute; left:88px; bottom:0; width:34px; height:130px; background:rgba(232,126,48,0.3)"></div>
+          <div style="position:absolute; left:130px; bottom:0; width:70px; height:62px; background:rgba(232,126,48,0.42)"></div>
+          <div style="position:absolute; left:208px; bottom:0; width:28px; height:110px; background:rgba(232,126,48,0.22)"></div>
+          <div style="position:absolute; left:244px; bottom:0; width:48px; height:78px; background:rgba(232,126,48,0.5)"></div>
+          <div style="position:absolute; left:0; right:0; bottom:34px; height:1px; background:rgba(232,126,48,0.5)"></div>
+          <div style="position:absolute; left:0; right:0; bottom:72px; height:1px; background:rgba(232,126,48,0.25)"></div>
+        </div>
+        <div style="flex:1; min-height:0; padding:16px; display:flex; flex-direction:column; gap:10px">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px">
+            <div>
+              <div style="font-size:22px; font-weight:700; letter-spacing:0.06em; color:#F0EDE4">FOOD STREET</div>
+              <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#E87E30">ORANGE</div>
+            </div>
+            <div style="flex:none; font-family:'IBM Plex Mono',monospace; font-size:28px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1.15; color:var(--gold,#C9A84C)">$200</div>
+          </div>
+          <div style="height:1px; background:rgba(201,168,76,0.25)"></div>
+          <div style="display:flex; flex-direction:column">
+            <sc-for list="{{ fsRentA }}" as="r" hint-placeholder-count="6">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:6px; background:{{ r.bg }}; border-bottom:1px solid rgba(90,85,104,0.22)">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">{{ r.label }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-variant-numeric:tabular-nums; color:{{ r.ink }}">{{ r.value }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:2px">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">HOUSE COST · $100</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">MORTGAGE VALUE · $100</div>
+          </div>
+          <div style="margin-top:auto; display:flex; flex-direction:column; gap:6px">
+            <div style="padding:11px; text-align:center; border-radius:4px; background:#13131F; border:1px solid var(--gold,#C9A84C); font-size:13px; font-weight:600; letter-spacing:0.12em; color:#F0EDE4; cursor:pointer" style-hover="background:#2A2A40; border-color:#E8C96A">BUY FOR $200</div>
+            <div style="padding:9px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(90,85,104,0.5); font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(160,154,138,0.7)">PASS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:320px">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#5A5568; margin-bottom:14px">OWNED · PLAYER 2 · 2 HOUSES</div>
+      <div style="width:320px; height:520px; border-radius:8px; background:#1E1E30; border:1px solid rgba(201,168,76,0.15); overflow:hidden; display:flex; flex-direction:column">
+        <div style="height:8px; background:#E87E30"></div>
+        <div style="position:relative; height:96px; background:#13131F; overflow:hidden">
+          <div style="position:absolute; left:28px; bottom:0; width:52px; height:96px; background:rgba(232,126,48,0.55)"></div>
+          <div style="position:absolute; left:88px; bottom:0; width:34px; height:130px; background:rgba(232,126,48,0.3)"></div>
+          <div style="position:absolute; left:130px; bottom:0; width:70px; height:62px; background:rgba(232,126,48,0.42)"></div>
+          <div style="position:absolute; left:208px; bottom:0; width:28px; height:110px; background:rgba(232,126,48,0.22)"></div>
+          <div style="position:absolute; left:244px; bottom:0; width:48px; height:78px; background:rgba(232,126,48,0.5)"></div>
+          <div style="position:absolute; left:0; right:0; bottom:34px; height:1px; background:rgba(232,126,48,0.5)"></div>
+          <div style="position:absolute; left:0; right:0; bottom:72px; height:1px; background:rgba(232,126,48,0.25)"></div>
+          <div style="position:absolute; inset:0; background:rgba(74,127,232,0.2)"></div>
+        </div>
+        <div style="flex:1; min-height:0; padding:16px; display:flex; flex-direction:column; gap:10px">
+          <div>
+            <div style="font-size:22px; font-weight:700; letter-spacing:0.06em; color:#F0EDE4">FOOD STREET</div>
+            <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#E87E30">ORANGE</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <div style="display:flex; align-items:center; gap:8px">
+              <div style="width:12px; height:12px; background:#4A7FE8"></div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#4A7FE8">PLAYER 2 · JAMES</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px">
+              <div style="width:14px; height:14px; border:1.5px solid #F0EDE4"></div>
+              <div style="width:14px; height:14px; border:1.5px solid #F0EDE4"></div>
+              <div style="margin-left:4px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; color:#A09A8A">2 HOUSES</div>
+            </div>
+          </div>
+          <div style="height:1px; background:rgba(201,168,76,0.25)"></div>
+          <div style="display:flex; flex-direction:column">
+            <sc-for list="{{ fsRentB }}" as="r" hint-placeholder-count="6">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:6px; background:{{ r.bg }}; border-bottom:1px solid rgba(90,85,104,0.22)">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">{{ r.label }}</div>
+                <div style="display:flex; align-items:center; gap:8px">
+                  <sc-if value="{{ r.active }}" hint-placeholder-val="{{ false }}">
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.12em; color:var(--gold,#C9A84C)">ACTIVE</div>
+                  </sc-if>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-variant-numeric:tabular-nums; color:{{ r.ink }}">{{ r.value }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:2px">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">HOUSE COST · $100</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#A09A8A">MORTGAGE VALUE · $100</div>
+          </div>
+          <div style="margin-top:auto; padding:12px; text-align:center; border-radius:4px; background:#1E1E30; border:1px solid rgba(90,85,104,0.5); font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; color:#A09A8A; cursor:pointer" style-hover="border-color:rgba(160,154,138,0.7)">CLOSE</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;gold&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#C9A84C&quot;, &quot;tsType&quot;: &quot;string&quot;,
+    &quot;options&quot;: [&quot;#C9A84C&quot;, &quot;#B8BCC4&quot;, &quot;#B07A3C&quot;, &quot;#8FB3C9&quot;], &quot;section&quot;: &quot;Accent&quot; },
+  &quot;displayFont&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;Barlow&quot;, &quot;tsType&quot;: &quot;string&quot;,
+    &quot;options&quot;: [&quot;Barlow&quot;, &quot;DM Sans&quot;], &quot;section&quot;: &quot;Type&quot; },
+  &quot;frameScale&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 0.85, &quot;min&quot;: 0.5, &quot;max&quot;: 1, &quot;step&quot;: 0.05,
+    &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Layout&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const gold = this.props.gold ?? '#C9A84C';
+    const font = (this.props.displayFont ?? 'Barlow') === 'DM Sans'
+      ? "'DM Sans', sans-serif" : "'Barlow', sans-serif";
+    const P = ['#E84560', '#4A7FE8', '#4AC48A', '#E8A838'];
+    const G = { brown: '#8B4513', lblue: '#6BB8D4', pink: '#E8659A', orange: '#E87E30',
+      red: '#E83030', yellow: '#E8C030', green: '#30A855', dblue: '#1A4FBF' };
+    const rgba = (hex, a) => {
+      const n = parseInt(hex.slice(1), 16);
+      return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+    };
+
+    const setupPlayers = [
+      { slot: 'PLAYER 1', name: 'SARAH', colour: P[0], colourName: 'CRIMSON', border: rgba(P[0], 0.45) },
+      { slot: 'PLAYER 2', name: 'JAMES', colour: P[1], colourName: 'COBALT', border: rgba(P[1], 0.45) },
+      { slot: 'PLAYER 3', name: 'PRIYA', colour: P[2], colourName: 'JADE', border: rgba(P[2], 0.45) }
+    ];
+
+    const tokenDefs = [
+      ['THE KEY', 'isKey'], ['THE WATCH', 'isWatch'], ['THE PENTHOUSE', 'isTower'],
+      ['THE YACHT', 'isYacht'], ['THE BRIEFCASE', 'isCase'], ['THE RING', 'isRing'],
+      ['THE CAR', 'isCar'], ['THE CROWN', 'isCrown']
+    ];
+    const tokens = tokenDefs.map(([name, flag]) => {
+      const taken = name === 'THE KEY';
+      const selected = name === 'THE WATCH';
+      const t = {
+        name, taken, selected,
+        bg: selected ? '#1E1E30' : '#13131F',
+        border: selected ? P[0] : (taken ? 'rgba(90,85,104,0.5)' : 'rgba(160,154,138,0.22)'),
+        glow: selected ? '0 0 0 1px ' + rgba(P[0], 0.45) : 'none',
+        opacity: taken ? 0.38 : 1,
+        ink: selected ? P[0] : (taken ? '#5A5568' : '#F0EDE4'),
+        labelColour: selected ? '#F0EDE4' : (taken ? '#5A5568' : '#A09A8A')
+      };
+      tokenDefs.forEach(([, f]) => { t[f] = false; });
+      t[flag] = true;
+      return t;
+    });
+
+    const prop = (name, price, band) => ({ name, price, band, kind: 'prop' });
+    const risk = () => ({ name: 'RISK', kind: 'risk' });
+    const city = () => ({ name: 'THE CITY', kind: 'city' });
+    const stn = (name) => ({ name, price: '$200', kind: 'station' });
+    const bolt = (name) => ({ name, price: '$150', kind: 'bolt' });
+    const drop = (name) => ({ name, price: '$150', kind: 'drop' });
+    const tax = (name, price) => ({ name, price, kind: 'tax' });
+
+    const bottom = [prop('OLD KENT ROAD', '$60', G.brown), city(),
+      prop('WHITECHAPEL ROAD', '$60', G.brown), tax('INCOME TAX', '$100'),
+      stn("KING'S CROSS"), prop('THE ANGEL ISLINGTON', '$100', G.lblue), risk(),
+      prop('EUSTON ROAD', '$100', G.lblue), prop('PENTONVILLE ROAD', '$120', G.lblue)];
+    const left = [prop('PALL MALL', '$140', G.pink), bolt('ELECTRIC COMPANY'),
+      prop('WHITEHALL', '$140', G.pink), prop('NORTHUMBERLAND AVE', '$160', G.pink),
+      stn('MARYLEBONE'), prop('BOW STREET', '$180', G.orange), city(),
+      prop('MARLBOROUGH ST', '$180', G.orange), prop('FOOD STREET', '$200', G.orange)];
+    const top = [prop('STRAND', '$220', G.red), risk(), prop('FLEET STREET', '$220', G.red),
+      prop('TRAFALGAR SQUARE', '$240', G.red), stn('FENCHURCH ST'),
+      prop('LEICESTER SQUARE', '$260', G.yellow), prop('COVENTRY STREET', '$260', G.yellow),
+      drop('WATER WORKS'), prop('PICCADILLY', '$280', G.yellow)];
+    const right = [prop('REGENT STREET', '$300', G.green), city(),
+      prop('OXFORD STREET', '$300', G.green), prop('BOND STREET', '$320', G.green),
+      stn('LIVERPOOL ST'), risk(), prop('PARK LANE', '$350', G.dblue),
+      tax('SUPER TAX', '$200'), prop('MAYFAIR', '$400', G.dblue)];
+
+    const owners = { 'THE ANGEL ISLINGTON': 1, 'EUSTON ROAD': 1, 'PENTONVILLE ROAD': 1,
+      'BOW STREET': 0, 'MARLBOROUGH ST': 0, 'FOOD STREET': 0, 'REGENT STREET': 2,
+      'OXFORD STREET': 2, 'BOND STREET': 2, "KING'S CROSS": 3, 'WATER WORKS': 3, 'MAYFAIR': 1 };
+    const builds = { 'BOW STREET': { h: 3 }, 'FOOD STREET': { hotel: true } };
+    const onBoard = { 'FOOD STREET': [0], 'TRAFALGAR SQUARE': [1], 'LIVERPOOL ST': [2] };
+    const pLabel = ['P1', 'P2', 'P3', 'P4'];
+
+    const edge = (list, geom) => list.map((s, i) => {
+      const o = owners[s.name];
+      const b = builds[s.name] || {};
+      const oc = o === undefined ? '' : P[o];
+      return Object.assign({}, s, geom(i), {
+        isProp: s.kind === 'prop', isRisk: s.kind === 'risk', isCity: s.kind === 'city',
+        isStation: s.kind === 'station', isBolt: s.kind === 'bolt',
+        isDrop: s.kind === 'drop', isTax: s.kind === 'tax',
+        band: s.band || '', price: s.price || '',
+        owner: oc ? pLabel[o] : '', ownerColour: oc || 'transparent',
+        border: oc ? rgba(oc, 0.7) : 'rgba(201,168,76,0.12)',
+        glowFill: oc ? rgba(oc, 0.16) : 'transparent',
+        glow: oc ? 'inset 0 0 14px ' + rgba(oc, 0.18) : 'none',
+        bg: oc ? '#16161F' : '#101019',
+        houses: b.h ? Array.from({ length: b.h }, (_, k) => k) : [],
+        hotel: !!b.hotel,
+        here: (onBoard[s.name] || []).map(k => ({ colour: P[k] }))
+      });
+    });
+
+    const boardSpaces = [].concat(
+      edge(bottom, i => ({ r: 11, c: 10 - i, dir: 'column-reverse', bw: '100%', bh: '7px' })),
+      edge(left, i => ({ r: 10 - i, c: 1, dir: 'row', bw: '7px', bh: '100%' })),
+      edge(top, i => ({ r: 1, c: 2 + i, dir: 'column', bw: '100%', bh: '7px' })),
+      edge(right, i => ({ r: 2 + i, c: 11, dir: 'row-reverse', bw: '7px', bh: '100%' }))
+    );
+
+    const tg = (name, band, tiles) => ({ name, band,
+      tiles: tiles.map(([n, p]) => ({ name: n, price: p })) });
+    const tileGroups = [
+      tg('BROWN', G.brown, [['OLD KENT ROAD', '$60'], ['WHITECHAPEL ROAD', '$60']]),
+      tg('LIGHT BLUE', G.lblue, [['THE ANGEL ISLINGTON', '$100'], ['EUSTON ROAD', '$100'], ['PENTONVILLE ROAD', '$120']]),
+      tg('PINK', G.pink, [['PALL MALL', '$140'], ['WHITEHALL', '$140'], ['NORTHUMBERLAND AVE', '$160']]),
+      tg('RED', G.red, [['STRAND', '$220'], ['FLEET STREET', '$220'], ['TRAFALGAR SQUARE', '$240']]),
+      tg('YELLOW', G.yellow, [['LEICESTER SQUARE', '$260'], ['COVENTRY STREET', '$260'], ['PICCADILLY', '$280']]),
+      tg('GREEN', G.green, [['REGENT STREET', '$300'], ['OXFORD STREET', '$300'], ['BOND STREET', '$320']]),
+      tg('DARK BLUE', G.dblue, [['PARK LANE', '$350'], ['MAYFAIR', '$400']])
+    ];
+    const stationNames = ["KING'S CROSS STATION", 'MARYLEBONE STATION',
+      'FENCHURCH STREET STATION', 'LIVERPOOL STREET STATION'].map(n => ({ name: n }));
+    const ownedExamples = [
+      { name: 'OLD KENT ROAD', price: '$60', band: G.brown, group: 'BROWN',
+        owner: 'P4', colourName: 'AMBER', colour: P[3] },
+      { name: 'MAYFAIR', price: '$400', band: G.dblue, group: 'DARK BLUE',
+        owner: 'P2', colourName: 'COBALT', colour: P[1] },
+      { name: 'BOND STREET', price: '$320', band: G.green, group: 'GREEN',
+        owner: 'P3', colourName: 'JADE', colour: P[2] }
+    ].map(o => Object.assign(o, { fill: rgba(o.colour, 0.16) }));
+
+    const hud = (o) => Object.assign({ bg: '#1E1E30', border: 'rgba(201,168,76,0.15)',
+      cashColour: gold, status: 'WAITING', statusBg: '#13131F',
+      statusBorder: 'rgba(160,154,138,0.25)', statusColour: '#5A5568' }, o);
+    const BAND = { brown: '#8C6239', cyan: '#6BB8D4', pink: '#D45A9E', orange: '#E8813A',
+      red: '#E84545', yellow: '#E8C93A', green: '#3FA86B', blue: '#4A7FE8' };
+    const boardHud = [
+      hud({ name: 'SARAH', colour: P[0], cash: '$1,860', props: '6 PROPERTIES',
+        token: 'THE WATCH', bg: '#2A2A40', border: gold, status: 'YOUR TURN',
+        statusBg: 'rgba(201,168,76,0.10)', statusBorder: gold, statusColour: gold,
+        bands: [BAND.pink, BAND.pink, BAND.pink, BAND.yellow, BAND.yellow, BAND.cyan] }),
+      hud({ name: 'JAMES', colour: P[1], cash: '$1,240', props: '4 PROPERTIES', token: 'THE YACHT',
+        bands: [BAND.blue, BAND.blue, BAND.cyan, BAND.brown] }),
+      hud({ name: 'PRIYA', colour: P[2], cash: '$980', props: '3 PROPERTIES', token: 'THE RING',
+        bands: [BAND.green, BAND.green, BAND.orange] }),
+      hud({ name: 'ALI', colour: P[3], cash: '$640', props: '2 PROPERTIES', token: 'THE CROWN',
+        cashColour: '#E8A838', border: 'rgba(232,168,56,0.4)',
+        bands: [BAND.red, BAND.brown] })
+    ];
+
+    const boardLog = [
+      { colour: P[0], ink: '#F0EDE4', text: 'SARAH rolled 7 · moved to WATER WORKS' },
+      { colour: P[3], ink: '#A09A8A', text: 'ALI paid $220 rent to SARAH · BOW STREET' },
+      { colour: P[3], ink: '#A09A8A', text: 'ALI mortgaged WHITECHAPEL ROAD · +$30' },
+      { colour: P[2], ink: '#A09A8A', text: 'PRIYA built 2 houses on OXFORD STREET' },
+      { colour: P[1], ink: '#A09A8A', text: 'JAMES drew RISK · advance to MAYFAIR' },
+      { colour: P[1], ink: '#A09A8A', text: 'JAMES bought MAYFAIR · -$400' },
+      { colour: P[0], ink: '#A09A8A', text: 'SARAH passed on FOOD STREET' },
+      { colour: P[2], ink: '#A09A8A', text: 'PRIYA passed GO · +$200' }
+    ];
+
+    const PIP = { 0: [0, 0, 0, 0, 0, 0, 0, 0, 0], 1: [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      2: [1, 0, 0, 0, 0, 0, 0, 0, 1], 3: [1, 0, 0, 0, 1, 0, 0, 0, 1],
+      4: [1, 0, 1, 0, 0, 0, 1, 0, 1], 5: [1, 0, 1, 0, 1, 0, 1, 0, 1],
+      6: [1, 0, 1, 1, 0, 1, 1, 0, 1] };
+    const face = n => PIP[n].map(v => ({ bg: v ? '#F0EDE4' : 'transparent' }));
+    const die = (o) => Object.assign({ border: 'rgba(201,168,76,0.2)', glow: 'none',
+      filter: 'none', t1: 'none', t2: 'none', total: '', headline: '', headColour: gold,
+      note: '', noteColour: '#A09A8A', showBtn: false, jail: '' }, o);
+    const boardDice = { d1: face(4), d2: face(3) };
+    const fsRows = [['BASE RENT', '$16'], ['1 HOUSE', '$80'], ['2 HOUSES', '$220'], ['3 HOUSES', '$600'], ['4 HOUSES', '$800'], ['HOTEL', '$1,000']];
+    const fsRentA = fsRows.map(([label, value]) => ({ label, value, bg: 'transparent', ink: '#F0EDE4', active: false }));
+    const fsRentB = fsRows.map(([label, value]) => ({
+      label, value,
+      bg: label === '2 HOUSES' ? 'rgba(201,168,76,0.08)' : 'transparent',
+      ink: label === '2 HOUSES' ? '#C9A84C' : '#F0EDE4',
+      active: label === '2 HOUSES'
+    }));
+    const introBoardCells = [];
+    for (let i = 1; i <= 11; i++) {
+      introBoardCells.push({ col: i, row: 1 }, { col: i, row: 11 });
+      if (i > 1 && i < 11) introBoardCells.push({ col: 1, row: i }, { col: 11, row: i });
+    }
+    const introRoster = [
+      { name: 'SARAH', token: 'THE WATCH', meta: 'PLAYER 1 · CRIMSON', colour: P[0] },
+      { name: 'JAMES', token: 'THE YACHT', meta: 'PLAYER 2 · COBALT', colour: P[1] },
+      { name: 'PRIYA', token: 'THE RING', meta: 'PLAYER 3 · JADE', colour: P[2] },
+      { name: 'ALI', token: 'THE CROWN', meta: 'PLAYER 4 · AMBER', colour: P[3] }
+    ];
+    const diceStates = [
+      die({ label: 'STATE 1 · IDLE', d1: face(0), d2: face(0), note: 'Awaiting roll.', showBtn: true }),
+      die({ label: 'STATE 2 · ROLLING', d1: face(5), d2: face(2), filter: 'blur(2px)',
+        t1: 'rotate(-14deg)', t2: 'rotate(11deg)', note: 'Rolling.', noteColour: '#5A5568' }),
+      die({ label: 'STATE 3 · NORMAL ROLL', d1: face(4), d2: face(3), total: '7',
+        note: 'Move 7 spaces.' }),
+      die({ label: 'STATE 4 · NORMAL DOUBLE', d1: face(3), d2: face(3), total: '6',
+        note: 'Double. Turn ends after landing.' }),
+      die({ label: 'STATE 5 · DOUBLE SIX', d1: face(6), d2: face(6), border: gold,
+        glow: '0 0 0 3px ' + rgba(gold, 0.18), headline: 'Double Six.', note: 'Roll again.' }),
+      die({ label: 'STATE 6 · DOUBLE SIX IN JAIL', d1: face(6), d2: face(6), border: gold,
+        glow: '0 0 0 3px ' + rgba(gold, 0.18), headline: 'Double Six.',
+        note: 'Roll again.', jail: 'In Jail. No movement. No escape.' })
+    ];
+
+    const rows = (arr, activeKey) => arr.map(([k, v]) => ({ k, v,
+      active: k === activeKey,
+      bg: k === activeKey ? rgba(gold, 0.1) : 'transparent',
+      labelColour: k === activeKey ? gold : '#A09A8A',
+      valColour: k === activeKey ? gold : '#F0EDE4' }));
+    const mayfairRent = rows([['BASE RENT', '$50'], ['1 HOUSE', '$200'], ['2 HOUSES', '$600'],
+      ['3 HOUSES', '$1,400'], ['4 HOUSES', '$1,700'], ['HOTEL', '$2,000']], '');
+    const stationRent = rows([['1 STATION', '$25'], ['2 STATIONS', '$50'],
+      ['3 STATIONS', '$100'], ['4 STATIONS', '$200']], '');
+
+    const arr = n => Array.from({ length: n }, (_, k) => k);
+    const buildProps = [
+      { name: 'Bow Street', houses: arr(2), count: '2 HOUSES', canSell: true, hotel: false },
+      { name: 'Marlborough Street', houses: arr(1), count: '1 HOUSE', canSell: true, hotel: false },
+      { name: 'Food Street', houses: [], count: 'UNIMPROVED', canSell: false, hotel: false }
+    ];
+
+    const notifications = [
+      { amount: '+$200', label: 'Passed GO', colour: '#4CAF7A', accent: gold },
+      { amount: '−$220', label: 'Rent to JAMES', colour: '#E84545', accent: '#E84545' },
+      { amount: '+$220', label: 'Rent from SARAH', colour: '#4CAF7A', accent: '#4CAF7A' },
+      { amount: '−$100', label: 'Income Tax · Bank', colour: '#A09A8A', accent: '#5A5568' },
+      { amount: '$80', label: 'Cash running low', colour: '#E8A838', accent: '#E8A838' }
+    ];
+
+    const howTo = [
+      ['The Basics', 'Be the last player remaining. Buy properties, build on them, collect rent. If you cannot pay, you are out.'],
+      ['Rolling the Dice', 'Roll two dice and move. If you roll doubles — any matching pair — move, resolve the space, and your turn ends. If you roll 6+6 specifically, do not move. Roll again. This can repeat.'],
+      ['Buying Properties', 'Land on an unowned property to buy it. If you pass, it stays unowned. There are no auctions.'],
+      ['Rent', 'Land on another player\u2019s property and pay rent. If they own the full colour group with no buildings, you pay double the base rent. Once buildings are placed, the building rent applies exactly.'],
+      ['Building', 'Own a full colour group to build. There is no restriction on even building — place houses wherever you like within your group. Four houses upgrades to a hotel.'],
+      ['Trading', 'Offer and receive any combination of properties and cash. Two properties for one is valid. Mortgaged properties and properties with buildings cannot be traded.'],
+      ['Jail', 'Roll a double that is not 6+6 to escape free. Pay $50. Or use a Get Out of Jail Free card.'],
+      ['Bankruptcy', 'If you cannot pay, sell buildings and mortgage properties first. If you are still short, you are eliminated. Your properties return to the Bank. The player you owed receives nothing.']
+    ].map(([title, body]) => ({ title, body }));
+
+    const pf = (name, band, note, props) => ({ name, band, note, props });
+    const portfolio = [
+      pf('ORANGE', G.orange, 'COMPLETE GROUP', [
+        { name: 'Bow Street', houses: arr(2), state: '', tag: '', actions: [{ t: 'SELL' }, { t: 'BUILD' }] },
+        { name: 'Marlborough Street', houses: arr(1), state: '', tag: '', actions: [{ t: 'SELL' }, { t: 'BUILD' }] },
+        { name: 'Food Street', houses: [], state: '—', tag: '', actions: [{ t: 'BUILD' }] }
+      ]),
+      pf('RED', G.red, 'INCOMPLETE', [
+        { name: 'Strand', houses: [], state: '—', tag: '', actions: [{ t: 'MORTGAGE' }] },
+        { name: 'Fleet Street', houses: [], state: '', tag: 'MORTGAGED', actions: [{ t: 'UNMORTGAGE' }] }
+      ]),
+      pf('STATIONS', '#2A2A40', '2 OWNED', [
+        { name: "King's Cross Station", houses: [], state: '—', tag: '', actions: [{ t: 'MORTGAGE' }] },
+        { name: 'Marylebone Station', houses: [], state: '—', tag: '', actions: [{ t: 'MORTGAGE' }] }
+      ])
+    ];
+
+    const liquidate = [
+      { name: 'Bow Street', detail: '2 HOUSES', action: 'SELL FOR $200', kind: 'sell' },
+      { name: 'Marlborough Street', detail: 'UNIMPROVED', action: 'MORTGAGE FOR $90', kind: 'mortgage' },
+      { name: 'Pall Mall', detail: 'UNIMPROVED', action: 'MORTGAGE FOR $70', kind: 'mortgage' },
+      { name: 'Whitehall', detail: 'MORTGAGED', action: 'NO VALUE', kind: 'none' }
+    ].map(r => ({ ...r,
+      colour: r.kind === 'none' ? '#5A5568' : (r.kind === 'sell' ? '#F0EDE4' : '#E8A838'),
+      border: r.kind === 'none' ? 'rgba(90,85,104,0.5)'
+        : (r.kind === 'sell' ? 'rgba(201,168,76,0.35)' : 'rgba(232,168,56,0.45)') }));
+
+    const eliminated = [
+      { name: 'JAMES', slot: 'PLAYER 2', round: 'ELIMINATED ROUND 12', colour: P[1] },
+      { name: 'PRIYA', slot: 'PLAYER 3', round: 'ELIMINATED ROUND 8', colour: P[2] },
+      { name: 'ALI', slot: 'PLAYER 4', round: 'ELIMINATED ROUND 15', colour: P[3] }
+    ];
+
+    return { gold, displayFont: font, frameScale: this.props.frameScale ?? 0.85,
+      P, G, rgba, setupPlayers, tokens, boardSpaces, tileGroups, stationNames,
+      ownedExamples, boardHud, boardLog, boardDice, fsRentA, fsRentB, introRoster, introBoardCells, diceStates, mayfairRent, stationRent,
+      buildProps, notifications, howTo, portfolio, liquidate, eliminated };
+  }
+}
+</script>
+</body>
+</html>
